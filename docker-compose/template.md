@@ -3,11 +3,11 @@
 ~~~
 version: "3"
 ~~~
-## variables.env
+## stack.env
 ~~~
 USER
 PASS
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0MDAxNzQwM119
+eyJoaXN0b3J5IjpbMTQ4NjE0MTI2OCwtNjQwMDE3NDAzXX0=
 -->

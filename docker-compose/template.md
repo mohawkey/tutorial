@@ -1,5 +1,5 @@
 # PostgreSQL
-## docker-compose
+## docker-compose.yaml
 ~~~
 version: "3"
 ~~~
@@ -9,5 +9,5 @@ USER
 PASS
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4NjE0MTI2OCwtNjQwMDE3NDAzXX0=
+eyJoaXN0b3J5IjpbLTIwMjE0ODQ4MjUsLTY0MDAxNzQwM119
 -->

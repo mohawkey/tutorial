@@ -49,7 +49,13 @@ network:
 # sudo domainname home.io
 # nslookup analytics.google.com 8.8.8.8
 ~~~
+#### Set Local Time
+~~~
+# timedatectl
+# sudo timedatectl set-timezone Europe/Brussels
+# sudo dpkg-reconfigure tzdata
+~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzQzMjMwNzQsNjQ5MTQ1NTAyLDEyNz
-Q3MzE4NTRdfQ==
+eyJoaXN0b3J5IjpbMjY2MjI2NzM3LC0xMjc0MzIzMDc0LDY0OT
+E0NTUwMiwxMjc0NzMxODU0XX0=
 -->

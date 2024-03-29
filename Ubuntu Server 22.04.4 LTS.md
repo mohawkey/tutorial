@@ -182,12 +182,32 @@ $ docker run -d -p 8000:8000 -p 9443:9443 \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer:/data portainer/portainer-ce:latest
 ~~~
+#### Ad
+~~~
+version: "3"
+services:
+  adguardhome:
+    image: adguard/adguardhome
+    container_name: adguardhome
+    ports:
+      - 53:53/tcp
+      - 53:53/udp
+      - 784:784/udp
+      - 853:853/tcp
+      - 3000:3000/tcp
+      - 80:80/tcp
+      - 443:443/tcp
+    volumes:
+      - ./workdir:/opt/adguardhome/work
+      - ./confdir:/opt/adguardhome/conf
+    restart: unless-stopped
+~~~    
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTI2ODM2NTgsLTEwNTk3NDkyNDUsLT
-c4MDcxOTIwOSwtMTIyMzQ3Njk5OSwtMTM2MTY0Njc2MiwzNDQ1
-MTI3MjksLTEyODY5MTg0MzMsMTk5NjM2NjM4NSwtMTQzNDUyNj
-k4MCwtNjg0NjcwMTU2LDE0MDkzNTU2LDI4NjM0NjQyOSwyNjYy
-MjY3MzcsLTEyNzQzMjMwNzQsNjQ5MTQ1NTAyLDEyNzQ3MzE4NT
-RdfQ==
+eyJoaXN0b3J5IjpbLTQ5MDg1NTUyMSwtMTA1MjY4MzY1OCwtMT
+A1OTc0OTI0NSwtNzgwNzE5MjA5LC0xMjIzNDc2OTk5LC0xMzYx
+NjQ2NzYyLDM0NDUxMjcyOSwtMTI4NjkxODQzMywxOTk2MzY2Mz
+g1LC0xNDM0NTI2OTgwLC02ODQ2NzAxNTYsMTQwOTM1NTYsMjg2
+MzQ2NDI5LDI2NjIyNjczNywtMTI3NDMyMzA3NCw2NDkxNDU1MD
+IsMTI3NDczMTg1NF19
 -->

@@ -55,7 +55,7 @@ network:
 # sudo timedatectl set-timezone Europe/Brussels
 # sudo dpkg-reconfigure tzdata
 ~~~
-####  Install Samba Server
+###  Install Samba Server
 ~~~
 # sudo apt install samba
 # mkdir -p /public/samba
@@ -87,9 +87,46 @@ sudo smbpasswd -a mohawkey
 # sudo ufw enable
 # sudo ufw status verbose
 ~~~
+### Install LXD container
+~~~
+# sudo snap install lxd
+# sudo snap list
+
+# lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+…
+sda      8:0    0 223.6G  0 disk 
+├─sda1   8:1    0     1M  0 part 
+├─sda2   8:2    0    15G  0 part /
+└─sda3   8:3    0 208.6G  0 part 
+
+# lxd init
+Would you like to use LXD clustering? (yes/no) [default=no]: no
+Do you want to configure a new storage pool? (yes/no) [default=yes]: yes
+Name of the new storage pool [default=default]: default
+Name of the storage backend to use (btrfs, dir, lvm, zfs, ceph) [default=zfs]: zfs
+Create a new ZFS pool? (yes/no) [default=yes]: yes
+Would you like to use an existing empty block device (yes/no) [default=no]: yes
+Path to the existing block device: /dev/sda3
+Would you like to connect to a MAAS server? (yes/no) [default=no]: no
+Would you like to create a new local network bridge? (yes/no) [default=yes]: no
+Would you like to configure LXD to use an existing bridge or host interface? [default=no]: yes
+Name of the existing bridge or host interface: br0
+Would you like the LXD server to be available over the network? (yes/no) [default=no]: no
+Would you like stale cached images to be updated automatically? (yes/no) [default=yes]: yes
+Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]: no
+
+# lxc storage list
+# lxc storage show default
+# lxc storage info default
+
+# sudo zfs list
+# zpool list
+
+~~~
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAzNjc0MjksLTE0MzQ1MjY5ODAsLTY4ND
-Y3MDE1NiwxNDA5MzU1NiwyODYzNDY0MjksMjY2MjI2NzM3LC0x
-Mjc0MzIzMDc0LDY0OTE0NTUwMiwxMjc0NzMxODU0XX0=
+eyJoaXN0b3J5IjpbMTk5NjM2NjM4NSwtMTQzNDUyNjk4MCwtNj
+g0NjcwMTU2LDE0MDkzNTU2LDI4NjM0NjQyOSwyNjYyMjY3Mzcs
+LTEyNzQzMjMwNzQsNjQ5MTQ1NTAyLDEyNzQ3MzE4NTRdfQ==
 -->

@@ -122,9 +122,15 @@ Would you like stale cached images to be updated automatically? (yes/no) [defaul
 Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]: no
 
 ON ERROR : zpool create -m none -O compression=on default /dev/sda3 -f
+ON ERROR : zpool destroy default
 
 dev/sda3
 # lxc storage list
++---------+--------+---------+-------------+---------+---------+ 
+|  NAME   | DRIVER | SOURCE  | DESCRIPTION | USED BY |  STATE  | 
++---------+--------+---------+-------------+---------+---------+ 
+| default | zfs    | default |             | 1       | CREATED | 
++---------+--------+---------+-------------+---------+---------+
 # lxc storage show default
 # lxc storage info default
 
@@ -138,8 +144,8 @@ $ lxc launch ubuntu:22.04 docker-151 -n br0
 ~~~
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ0NTEyNzI5LC0xMjg2OTE4NDMzLDE5OT
-YzNjYzODUsLTE0MzQ1MjY5ODAsLTY4NDY3MDE1NiwxNDA5MzU1
-NiwyODYzNDY0MjksMjY2MjI2NzM3LC0xMjc0MzIzMDc0LDY0OT
-E0NTUwMiwxMjc0NzMxODU0XX0=
+eyJoaXN0b3J5IjpbLTEzNjE2NDY3NjIsMzQ0NTEyNzI5LC0xMj
+g2OTE4NDMzLDE5OTYzNjYzODUsLTE0MzQ1MjY5ODAsLTY4NDY3
+MDE1NiwxNDA5MzU1NiwyODYzNDY0MjksMjY2MjI2NzM3LC0xMj
+c0MzIzMDc0LDY0OTE0NTUwMiwxMjc0NzMxODU0XX0=
 -->

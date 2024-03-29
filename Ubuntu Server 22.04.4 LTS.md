@@ -224,13 +224,43 @@ enable resolve
 pull
 ~~~
 ~~~
+version: '3.8'
+
+services:
+  nginx:
+    image: jc21/nginx-proxy-manager:latest
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+      - 81:81
+
+    environment:
+      DISABLE_IPV6: 'true'
+
+    volumes:
+      - data:/data
+      - letsencrypt:/etc/letsencrypt
+
+    networks:
+      - nginx-proxy-net
+
+volumes:
+  data:
+  letsencrypt:
+
+networks:
+  nginx-proxy-net:
+    name: nginx-proxy-net
+    external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDEwMDc4ODAsMjA5NTY2ODUwOCw2OT
-cwMzAxODksLTEwNTc0NDM5MzEsLTEwNTI2ODM2NTgsLTEwNTk3
-NDkyNDUsLTc4MDcxOTIwOSwtMTIyMzQ3Njk5OSwtMTM2MTY0Nj
-c2MiwzNDQ1MTI3MjksLTEyODY5MTg0MzMsMTk5NjM2NjM4NSwt
-MTQzNDUyNjk4MCwtNjg0NjcwMTU2LDE0MDkzNTU2LDI4NjM0Nj
-QyOSwyNjYyMjY3MzcsLTEyNzQzMjMwNzQsNjQ5MTQ1NTAyLDEy
-NzQ3MzE4NTRdfQ==
+eyJoaXN0b3J5IjpbLTc3OTc2MTcwMywtMTg0MTAwNzg4MCwyMD
+k1NjY4NTA4LDY5NzAzMDE4OSwtMTA1NzQ0MzkzMSwtMTA1MjY4
+MzY1OCwtMTA1OTc0OTI0NSwtNzgwNzE5MjA5LC0xMjIzNDc2OT
+k5LC0xMzYxNjQ2NzYyLDM0NDUxMjcyOSwtMTI4NjkxODQzMywx
+OTk2MzY2Mzg1LC0xNDM0NTI2OTgwLC02ODQ2NzAxNTYsMTQwOT
+M1NTYsMjg2MzQ2NDI5LDI2NjIyNjczNywtMTI3NDMyMzA3NCw2
+NDkxNDU1MDJdfQ==
 -->

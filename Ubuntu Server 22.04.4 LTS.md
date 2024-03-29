@@ -58,27 +58,27 @@ network:
 ####  Install Samba Server
 ~~~
 # sudo apt install samba
+# mkdir -p /public/samba
+# chmod 777 /public/samba
 # sudo cp /etc/samba/smb.conf /root/smb-backup.conf
 # sudo nano /etc/samba/smb.conf
 ~~~
 ~~~
-[global]
-guest account = warez
-
-[publicshare]
-path = /public/samba
-writable = yes
-guest ok = yes
-guest only = yes
-force create mode = 775
-force directory mode = 775
+[public]
+  comment = public anonymous access 
+  path = /public/samba/ 
+  browsable = yes 
+  create mask = 0660 
+  directory mask = 0771 
+  writable = yes 
+  guest ok = yes
 ~~~
 adding a user
 ~~~
 sudo smbpasswd -a mohawkey
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwOTM1NTYsMjg2MzQ2NDI5LDI2NjIyNj
-czNywtMTI3NDMyMzA3NCw2NDkxNDU1MDIsMTI3NDczMTg1NF19
-
+eyJoaXN0b3J5IjpbLTY4NDY3MDE1NiwxNDA5MzU1NiwyODYzND
+Y0MjksMjY2MjI2NzM3LC0xMjc0MzIzMDc0LDY0OTE0NTUwMiwx
+Mjc0NzMxODU0XX0=
 -->

@@ -39,10 +39,11 @@ network:
 
 ~~~
 ~~~
+# sudo chmod 600 network.yaml
 # sudo netplan generate
 # sudo netplan apply
 ~~~
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3NDczMTg1NF19
+eyJoaXN0b3J5IjpbLTEyOTgxMzU5MTIsMTI3NDczMTg1NF19
 -->

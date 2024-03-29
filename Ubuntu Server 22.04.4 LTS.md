@@ -55,6 +55,10 @@ network:
 # sudo timedatectl set-timezone Europe/Brussels
 # sudo dpkg-reconfigure tzdata
 ~~~
+#### disable cloud-init
+~~~
+# sudo touch /etc/cloud/cloud-init.disabled
+~~~
 ###  Install Samba Server
 ~~~
 # sudo apt install samba
@@ -126,7 +130,8 @@ Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]: n
 ~~~
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NjM2NjM4NSwtMTQzNDUyNjk4MCwtNj
-g0NjcwMTU2LDE0MDkzNTU2LDI4NjM0NjQyOSwyNjYyMjY3Mzcs
-LTEyNzQzMjMwNzQsNjQ5MTQ1NTAyLDEyNzQ3MzE4NTRdfQ==
+eyJoaXN0b3J5IjpbLTE1NTY0MDkyMzgsMTk5NjM2NjM4NSwtMT
+QzNDUyNjk4MCwtNjg0NjcwMTU2LDE0MDkzNTU2LDI4NjM0NjQy
+OSwyNjYyMjY3MzcsLTEyNzQzMjMwNzQsNjQ5MTQ1NTAyLDEyNz
+Q3MzE4NTRdfQ==
 -->

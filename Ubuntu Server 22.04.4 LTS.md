@@ -151,27 +151,27 @@ $ lxc restart docker-151
 ~~~
 $ lxc exec docker-151 bash
 
-# Add Docker's official GPG key:
-sudo apt-get update
-sudo apt-get install ca-certificates curl
-sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
+apt-get update
+apt-get install ca-certificates curl
+install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+chmod a+r /etc/apt/keyrings/docker.asc
 
 # Add the repository to Apt sources:
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  
 sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ~~~
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTMyNTgzOTcsLTc4MDcxOTIwOSwtMT
-IyMzQ3Njk5OSwtMTM2MTY0Njc2MiwzNDQ1MTI3MjksLTEyODY5
-MTg0MzMsMTk5NjM2NjM4NSwtMTQzNDUyNjk4MCwtNjg0NjcwMT
-U2LDE0MDkzNTU2LDI4NjM0NjQyOSwyNjYyMjY3MzcsLTEyNzQz
-MjMwNzQsNjQ5MTQ1NTAyLDEyNzQ3MzE4NTRdfQ==
+eyJoaXN0b3J5IjpbOTAzOTkyMzQsLTc4MDcxOTIwOSwtMTIyMz
+Q3Njk5OSwtMTM2MTY0Njc2MiwzNDQ1MTI3MjksLTEyODY5MTg0
+MzMsMTk5NjM2NjM4NSwtMTQzNDUyNjk4MCwtNjg0NjcwMTU2LD
+E0MDkzNTU2LDI4NjM0NjQyOSwyNjYyMjY3MzcsLTEyNzQzMjMw
+NzQsNjQ5MTQ1NTAyLDEyNzQ3MzE4NTRdfQ==
 -->

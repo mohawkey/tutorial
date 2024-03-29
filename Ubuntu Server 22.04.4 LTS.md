@@ -142,11 +142,29 @@ dev/sda3
 ~~~
 $ lxc launch ubuntu:22.04 docker-151 -n br0
 ~~~
+#### Install docker
+~~~
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+~~~
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjM0NzY5OTksLTEzNjE2NDY3NjIsMz
-Q0NTEyNzI5LC0xMjg2OTE4NDMzLDE5OTYzNjYzODUsLTE0MzQ1
-MjY5ODAsLTY4NDY3MDE1NiwxNDA5MzU1NiwyODYzNDY0MjksMj
-Y2MjI2NzM3LC0xMjc0MzIzMDc0LDY0OTE0NTUwMiwxMjc0NzMx
-ODU0XX0=
+eyJoaXN0b3J5IjpbLTc4MDcxOTIwOSwtMTIyMzQ3Njk5OSwtMT
+M2MTY0Njc2MiwzNDQ1MTI3MjksLTEyODY5MTg0MzMsMTk5NjM2
+NjM4NSwtMTQzNDUyNjk4MCwtNjg0NjcwMTU2LDE0MDkzNTU2LD
+I4NjM0NjQyOSwyNjYyMjY3MzcsLTEyNzQzMjMwNzQsNjQ5MTQ1
+NTAyLDEyNzQ3MzE4NTRdfQ==
 -->

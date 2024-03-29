@@ -121,6 +121,9 @@ Would you like the LXD server to be available over the network? (yes/no) [defaul
 Would you like stale cached images to be updated automatically? (yes/no) [default=yes]: yes
 Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]: no
 
+ON ERROR : zpool create -m none -O compression=on default /dev/sda3 -f
+
+dev/sda3
 # lxc storage list
 # lxc storage show default
 # lxc storage info default
@@ -131,8 +134,8 @@ Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]: n
 ~~~
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODY5MTg0MzMsMTk5NjM2NjM4NSwtMT
-QzNDUyNjk4MCwtNjg0NjcwMTU2LDE0MDkzNTU2LDI4NjM0NjQy
-OSwyNjYyMjY3MzcsLTEyNzQzMjMwNzQsNjQ5MTQ1NTAyLDEyNz
-Q3MzE4NTRdfQ==
+eyJoaXN0b3J5IjpbLTcwMjc4OTUxOSwtMTI4NjkxODQzMywxOT
+k2MzY2Mzg1LC0xNDM0NTI2OTgwLC02ODQ2NzAxNTYsMTQwOTM1
+NTYsMjg2MzQ2NDI5LDI2NjIyNjczNywtMTI3NDMyMzA3NCw2ND
+kxNDU1MDIsMTI3NDczMTg1NF19
 -->

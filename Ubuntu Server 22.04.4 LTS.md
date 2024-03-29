@@ -73,7 +73,12 @@ guest only = yes
 force create mode = 775
 force directory mode = 775
 ~~~
+adding a user
+~~~
+sudo smbpasswd -a mohawkey
+~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg2MzQ2NDI5LDI2NjIyNjczNywtMTI3ND
-MyMzA3NCw2NDkxNDU1MDIsMTI3NDczMTg1NF19
+eyJoaXN0b3J5IjpbMTQwOTM1NTYsMjg2MzQ2NDI5LDI2NjIyNj
+czNywtMTI3NDMyMzA3NCw2NDkxNDU1MDIsMTI3NDczMTg1NF19
+
 -->

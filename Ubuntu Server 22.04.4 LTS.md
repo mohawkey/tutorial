@@ -55,8 +55,34 @@ network:
 # sudo timedatectl set-timezone Europe/Brussels
 # sudo dpkg-reconfigure tzdata
 ~~~
+####  Install Samba Server
+~~~
+# sudo apt install samba
+# sudo cp /etc/samba/smb.conf /root/smb-backup.conf
+# sudo nano /etc/samba/smb.conf
+~~~
+~~~
+[global]
 
+guest account = warez
+
+  
+
+[publicshare]
+
+path = /smb-public
+
+writable = yes
+
+guest ok = yes
+
+guest only = yes
+
+force create mode = 775
+
+force directory mode = 775
+~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5NDQyMjA3LDI2NjIyNjczNywtMTI3ND
-MyMzA3NCw2NDkxNDU1MDIsMTI3NDczMTg1NF19
+eyJoaXN0b3J5IjpbLTIwMzMyMTIwNDcsMjY2MjI2NzM3LC0xMj
+c0MzIzMDc0LDY0OTE0NTUwMiwxMjc0NzMxODU0XX0=
 -->

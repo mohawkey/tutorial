@@ -190,7 +190,6 @@ disable systemd-resolved service
 ~~~
 ~~~
 version: "3"
-
 services:
   adguard:
     image: adguard/adguardhome
@@ -207,10 +206,17 @@ services:
       - data:/opt/adguardhome/work
       - config:/opt/adguardhome/conf
     restart: unless-stopped
+    networks:
+      - nginx-proxy-net
     
 volumes:
   data:
   config:
+
+networks:
+  nginx-proxy-net:
+    name: nginx-proxy-net
+    external: true
 ~~~
 ### nginx-proxy-manager docker
 enable resolve
@@ -220,11 +226,11 @@ pull
 ~~~
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5NTY2ODUwOCw2OTcwMzAxODksLTEwNT
-c0NDM5MzEsLTEwNTI2ODM2NTgsLTEwNTk3NDkyNDUsLTc4MDcx
-OTIwOSwtMTIyMzQ3Njk5OSwtMTM2MTY0Njc2MiwzNDQ1MTI3Mj
-ksLTEyODY5MTg0MzMsMTk5NjM2NjM4NSwtMTQzNDUyNjk4MCwt
-Njg0NjcwMTU2LDE0MDkzNTU2LDI4NjM0NjQyOSwyNjYyMjY3Mz
-csLTEyNzQzMjMwNzQsNjQ5MTQ1NTAyLDEyNzQ3MzE4NTRdfQ==
-
+eyJoaXN0b3J5IjpbLTE4NDEwMDc4ODAsMjA5NTY2ODUwOCw2OT
+cwMzAxODksLTEwNTc0NDM5MzEsLTEwNTI2ODM2NTgsLTEwNTk3
+NDkyNDUsLTc4MDcxOTIwOSwtMTIyMzQ3Njk5OSwtMTM2MTY0Nj
+c2MiwzNDQ1MTI3MjksLTEyODY5MTg0MzMsMTk5NjM2NjM4NSwt
+MTQzNDUyNjk4MCwtNjg0NjcwMTU2LDE0MDkzNTU2LDI4NjM0Nj
+QyOSwyNjYyMjY3MzcsLTEyNzQzMjMwNzQsNjQ5MTQ1NTAyLDEy
+NzQ3MzE4NTRdfQ==
 -->

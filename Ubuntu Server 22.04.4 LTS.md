@@ -182,7 +182,11 @@ $ docker run -d -p 8000:8000 -p 9443:9443 \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer:/data portainer/portainer-ce:latest
 ~~~
-#### Ad
+#### adGuard docker
+disable
+~~~
+
+~~~
 ~~~
 version: "3"
 services:
@@ -208,10 +212,10 @@ volumes:
 ~~~    
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTc0NDM5MzEsLTEwNTI2ODM2NTgsLT
-EwNTk3NDkyNDUsLTc4MDcxOTIwOSwtMTIyMzQ3Njk5OSwtMTM2
-MTY0Njc2MiwzNDQ1MTI3MjksLTEyODY5MTg0MzMsMTk5NjM2Nj
-M4NSwtMTQzNDUyNjk4MCwtNjg0NjcwMTU2LDE0MDkzNTU2LDI4
-NjM0NjQyOSwyNjYyMjY3MzcsLTEyNzQzMjMwNzQsNjQ5MTQ1NT
-AyLDEyNzQ3MzE4NTRdfQ==
+eyJoaXN0b3J5IjpbLTEyMjMyMjg3NzQsLTEwNTc0NDM5MzEsLT
+EwNTI2ODM2NTgsLTEwNTk3NDkyNDUsLTc4MDcxOTIwOSwtMTIy
+MzQ3Njk5OSwtMTM2MTY0Njc2MiwzNDQ1MTI3MjksLTEyODY5MT
+g0MzMsMTk5NjM2NjM4NSwtMTQzNDUyNjk4MCwtNjg0NjcwMTU2
+LDE0MDkzNTU2LDI4NjM0NjQyOSwyNjYyMjY3MzcsLTEyNzQzMj
+MwNzQsNjQ5MTQ1NTAyLDEyNzQ3MzE4NTRdfQ==
 -->

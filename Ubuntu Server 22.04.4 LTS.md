@@ -186,28 +186,32 @@ $ docker run -d -p 8000:8000 -p 9443:9443 \
 ~~~
 version: "3"
 services:
-  adguardhome:
+  adguard:
     image: adguard/adguardhome
-    container_name: adguardhome
+    container_name: adguard
     ports:
       - 53:53/tcp
       - 53:53/udp
-      - 784:784/udp
-      - 853:853/tcp
+      # - 784:784/udp
+      # - 853:853/tcp
       - 3000:3000/tcp
       - 80:80/tcp
       - 443:443/tcp
     volumes:
-      - ./workdir:/opt/adguardhome/work
-      - ./confdir:/opt/adguardhome/conf
+      - data:/opt/adguardhome/work
+      - config:/opt/adguardhome/conf
     restart: unless-stopped
+    
+volumes:
+  data:
+  config:
 ~~~    
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MDg1NTUyMSwtMTA1MjY4MzY1OCwtMT
-A1OTc0OTI0NSwtNzgwNzE5MjA5LC0xMjIzNDc2OTk5LC0xMzYx
-NjQ2NzYyLDM0NDUxMjcyOSwtMTI4NjkxODQzMywxOTk2MzY2Mz
-g1LC0xNDM0NTI2OTgwLC02ODQ2NzAxNTYsMTQwOTM1NTYsMjg2
-MzQ2NDI5LDI2NjIyNjczNywtMTI3NDMyMzA3NCw2NDkxNDU1MD
-IsMTI3NDczMTg1NF19
+eyJoaXN0b3J5IjpbLTEwNTc0NDM5MzEsLTEwNTI2ODM2NTgsLT
+EwNTk3NDkyNDUsLTc4MDcxOTIwOSwtMTIyMzQ3Njk5OSwtMTM2
+MTY0Njc2MiwzNDQ1MTI3MjksLTEyODY5MTg0MzMsMTk5NjM2Nj
+M4NSwtMTQzNDUyNjk4MCwtNjg0NjcwMTU2LDE0MDkzNTU2LDI4
+NjM0NjQyOSwyNjYyMjY3MzcsLTEyNzQzMjMwNzQsNjQ5MTQ1NT
+AyLDEyNzQ3MzE4NTRdfQ==
 -->

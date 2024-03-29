@@ -99,10 +99,11 @@ sudo smbpasswd -a mohawkey
 # lsblk
 NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 …
-sda      8:0    0 223.6G  0 disk 
-├─sda1   8:1    0     1M  0 part 
-├─sda2   8:2    0    15G  0 part /
-└─sda3   8:3    0 208.6G  0 part 
+sda      8:0    0 931.5G  0 disk 
+├─sda1   8:1    0     1G  0 part /boot/efi
+├─sda2   8:2    0    25G  0 part /
+├─sda3   8:3    0   200G  0 part 
+└─sda4   8:4    0 705.5G  0 part /public 
 
 # lxd init
 Would you like to use LXD clustering? (yes/no) [default=no]: no
@@ -130,7 +131,7 @@ Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]: n
 ~~~
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTY0MDkyMzgsMTk5NjM2NjM4NSwtMT
+eyJoaXN0b3J5IjpbLTEyODY5MTg0MzMsMTk5NjM2NjM4NSwtMT
 QzNDUyNjk4MCwtNjg0NjcwMTU2LDE0MDkzNTU2LDI4NjM0NjQy
 OSwyNjYyMjY3MzcsLTEyNzQzMjMwNzQsNjQ5MTQ1NTAyLDEyNz
 Q3MzE4NTRdfQ==

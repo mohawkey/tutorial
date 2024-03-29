@@ -147,6 +147,12 @@ $ lxc config set docker-151 security.syscalls.intercept.setxattr=true
 $ lxc config set docker-151 security.syscalls.intercept.mknod=true
 $ lxc restart docker-151
 ~~~
+#### ip
+~~~
+# sudo nano /etc/netplan/network.yaml
+~~~
+~~~
+~~~ 
 #### Install docker
 ~~~
 $ lxc exec docker-151 bash
@@ -175,13 +181,13 @@ $ docker run -d -p 8000:8000 -p 9443:9443 \
     --name portainer --restart=always \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer:/data portainer/portainer-ce:latest
-
 ~~~
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTk3NDkyNDUsLTc4MDcxOTIwOSwtMT
-IyMzQ3Njk5OSwtMTM2MTY0Njc2MiwzNDQ1MTI3MjksLTEyODY5
-MTg0MzMsMTk5NjM2NjM4NSwtMTQzNDUyNjk4MCwtNjg0NjcwMT
-U2LDE0MDkzNTU2LDI4NjM0NjQyOSwyNjYyMjY3MzcsLTEyNzQz
-MjMwNzQsNjQ5MTQ1NTAyLDEyNzQ3MzE4NTRdfQ==
+eyJoaXN0b3J5IjpbLTEwNTI2ODM2NTgsLTEwNTk3NDkyNDUsLT
+c4MDcxOTIwOSwtMTIyMzQ3Njk5OSwtMTM2MTY0Njc2MiwzNDQ1
+MTI3MjksLTEyODY5MTg0MzMsMTk5NjM2NjM4NSwtMTQzNDUyNj
+k4MCwtNjg0NjcwMTU2LDE0MDkzNTU2LDI4NjM0NjQyOSwyNjYy
+MjY3MzcsLTEyNzQzMjMwNzQsNjQ5MTQ1NTAyLDEyNzQ3MzE4NT
+RdfQ==
 -->

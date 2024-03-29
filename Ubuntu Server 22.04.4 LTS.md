@@ -141,9 +141,16 @@ dev/sda3
 ### Install Container
 ~~~
 $ lxc launch ubuntu:22.04 docker-151 -n br0
+
+$ lxc config set docker-151 security.nesting=true 
+$ lxc config set docker-151 security.syscalls.intercept.setxattr=true
+$ lxc config set docker-151 security.syscalls.intercept.mknod=true
+$ lxc restart docker-151
 ~~~
 #### Install docker
 ~~~
+$ lxc exec docker-151 bash
+
 # Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
@@ -162,9 +169,9 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 ~~~
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4MDcxOTIwOSwtMTIyMzQ3Njk5OSwtMT
-M2MTY0Njc2MiwzNDQ1MTI3MjksLTEyODY5MTg0MzMsMTk5NjM2
-NjM4NSwtMTQzNDUyNjk4MCwtNjg0NjcwMTU2LDE0MDkzNTU2LD
-I4NjM0NjQyOSwyNjYyMjY3MzcsLTEyNzQzMjMwNzQsNjQ5MTQ1
-NTAyLDEyNzQ3MzE4NTRdfQ==
+eyJoaXN0b3J5IjpbLTEzNTMyNTgzOTcsLTc4MDcxOTIwOSwtMT
+IyMzQ3Njk5OSwtMTM2MTY0Njc2MiwzNDQ1MTI3MjksLTEyODY5
+MTg0MzMsMTk5NjM2NjM4NSwtMTQzNDUyNjk4MCwtNjg0NjcwMT
+U2LDE0MDkzNTU2LDI4NjM0NjQyOSwyNjYyMjY3MzcsLTEyNzQz
+MjMwNzQsNjQ5MTQ1NTAyLDEyNzQ3MzE4NTRdfQ==
 -->

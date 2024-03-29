@@ -55,7 +55,8 @@ network:
 # sudo timedatectl set-timezone Europe/Brussels
 # sudo dpkg-reconfigure tzdata
 ~~~
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY2MjI2NzM3LC0xMjc0MzIzMDc0LDY0OT
-E0NTUwMiwxMjc0NzMxODU0XX0=
+eyJoaXN0b3J5IjpbMTc5NDQyMjA3LDI2NjIyNjczNywtMTI3ND
+MyMzA3NCw2NDkxNDU1MDIsMTI3NDczMTg1NF19
 -->

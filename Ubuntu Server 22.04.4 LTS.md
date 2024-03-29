@@ -43,7 +43,12 @@ network:
 # sudo netplan generate
 # sudo netplan apply
 ~~~
-
+#### Setup hostname and domainname
+~~~
+# sudo hostnamectl set-hostname ubuntu.home.io
+# sudo domainname home.io
+# nslookup analytics.google.com 8.8.8.8
+~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTgxMzU5MTIsMTI3NDczMTg1NF19
+eyJoaXN0b3J5IjpbNjQ5MTQ1NTAyLDEyNzQ3MzE4NTRdfQ==
 -->

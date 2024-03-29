@@ -190,6 +190,7 @@ disable systemd-resolved service
 ~~~
 ~~~
 version: "3"
+
 services:
   adguard:
     image: adguard/adguardhome
@@ -200,8 +201,8 @@ services:
       # - 784:784/udp
       # - 853:853/tcp
       - 3000:3000/tcp
-      - 80:80/tcp
-      - 443:443/tcp
+      - 1080:80/tcp
+      - 1443:443/tcp
     volumes:
       - data:/opt/adguardhome/work
       - config:/opt/adguardhome/conf
@@ -213,10 +214,10 @@ volumes:
 ~~~    
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0MjE3MjUwNSwtMTA1NzQ0MzkzMSwtMT
-A1MjY4MzY1OCwtMTA1OTc0OTI0NSwtNzgwNzE5MjA5LC0xMjIz
-NDc2OTk5LC0xMzYxNjQ2NzYyLDM0NDUxMjcyOSwtMTI4NjkxOD
-QzMywxOTk2MzY2Mzg1LC0xNDM0NTI2OTgwLC02ODQ2NzAxNTYs
-MTQwOTM1NTYsMjg2MzQ2NDI5LDI2NjIyNjczNywtMTI3NDMyMz
-A3NCw2NDkxNDU1MDIsMTI3NDczMTg1NF19
+eyJoaXN0b3J5IjpbNjk3MDMwMTg5LC0xMDU3NDQzOTMxLC0xMD
+UyNjgzNjU4LC0xMDU5NzQ5MjQ1LC03ODA3MTkyMDksLTEyMjM0
+NzY5OTksLTEzNjE2NDY3NjIsMzQ0NTEyNzI5LC0xMjg2OTE4ND
+MzLDE5OTYzNjYzODUsLTE0MzQ1MjY5ODAsLTY4NDY3MDE1Niwx
+NDA5MzU1NiwyODYzNDY0MjksMjY2MjI2NzM3LC0xMjc0MzIzMD
+c0LDY0OTE0NTUwMiwxMjc0NzMxODU0XX0=
 -->

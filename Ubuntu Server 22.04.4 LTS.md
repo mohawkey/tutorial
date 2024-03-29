@@ -174,12 +174,12 @@ $ docker pull portainer/portainer-ce:latest
 $ docker run -d -p 8000:8000 -p 9443:9443 \
     --name portainer --restart=always \
     -v /var/run/docker.sock:/var/run/docker.sock \
-    -v portainer_data:/data portainer/portainer-ce:latest
+    -v portainer:/data portainer/portainer-ce:latest
 
 ~~~
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTI3Njc4MjYsLTc4MDcxOTIwOSwtMT
+eyJoaXN0b3J5IjpbLTEwNTk3NDkyNDUsLTc4MDcxOTIwOSwtMT
 IyMzQ3Njk5OSwtMTM2MTY0Njc2MiwzNDQ1MTI3MjksLTEyODY5
 MTg0MzMsMTk5NjM2NjM4NSwtMTQzNDUyNjk4MCwtNjg0NjcwMT
 U2LDE0MDkzNTU2LDI4NjM0NjQyOSwyNjYyMjY3MzcsLTEyNzQz

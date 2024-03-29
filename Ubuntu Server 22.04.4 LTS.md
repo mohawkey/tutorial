@@ -183,9 +183,10 @@ $ docker run -d -p 8000:8000 -p 9443:9443 \
     -v portainer:/data portainer/portainer-ce:latest
 ~~~
 #### adGuard docker
-disable
+disable systemd-resolved service
 ~~~
-
+# sudo systemctl disable systemd-resolved.service
+# sudo systemctl stop systemd-resolved.service
 ~~~
 ~~~
 version: "3"
@@ -212,10 +213,10 @@ volumes:
 ~~~    
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjMyMjg3NzQsLTEwNTc0NDM5MzEsLT
-EwNTI2ODM2NTgsLTEwNTk3NDkyNDUsLTc4MDcxOTIwOSwtMTIy
-MzQ3Njk5OSwtMTM2MTY0Njc2MiwzNDQ1MTI3MjksLTEyODY5MT
-g0MzMsMTk5NjM2NjM4NSwtMTQzNDUyNjk4MCwtNjg0NjcwMTU2
-LDE0MDkzNTU2LDI4NjM0NjQyOSwyNjYyMjY3MzcsLTEyNzQzMj
-MwNzQsNjQ5MTQ1NTAyLDEyNzQ3MzE4NTRdfQ==
+eyJoaXN0b3J5IjpbMTk0MjE3MjUwNSwtMTA1NzQ0MzkzMSwtMT
+A1MjY4MzY1OCwtMTA1OTc0OTI0NSwtNzgwNzE5MjA5LC0xMjIz
+NDc2OTk5LC0xMzYxNjQ2NzYyLDM0NDUxMjcyOSwtMTI4NjkxOD
+QzMywxOTk2MzY2Mzg1LC0xNDM0NTI2OTgwLC02ODQ2NzAxNTYs
+MTQwOTM1NTYsMjg2MzQ2NDI5LDI2NjIyNjczNywtMTI3NDMyMz
+A3NCw2NDkxNDU1MDIsMTI3NDczMTg1NF19
 -->

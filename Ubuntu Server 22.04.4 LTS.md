@@ -5,7 +5,7 @@ Update & Package Installation
 ~~~
 # sudo apt-get update
 # sudo apt-get upgrade
-# sudo apt-get install -y nano net-tools zfsutils bind9-utils
+# sudo apt-get install -y nano net-tools zfsutils dnsutils
 ~~~
 ### Configuring Static IP and Bridged Network
 ~~~
@@ -50,6 +50,6 @@ network:
 # nslookup analytics.google.com 8.8.8.8
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDExNjE2Miw2NDkxNDU1MDIsMTI3ND
-czMTg1NF19
+eyJoaXN0b3J5IjpbLTEyNzQzMjMwNzQsNjQ5MTQ1NTAyLDEyNz
+Q3MzE4NTRdfQ==
 -->

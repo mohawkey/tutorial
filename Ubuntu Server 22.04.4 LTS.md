@@ -77,8 +77,18 @@ adding a user
 ~~~
 sudo smbpasswd -a mohawkey
 ~~~
+### Install UFW
+~~~
+# sudo apt install ufw
+# ls /etc/ufw/applications.d/
+# more /etc/ufw/applications.d/openssh-server
+# sudo ufw allow OpenSSH
+# sudo ufw enable
+# sudo ufw status verbose
+~~~
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NDY3MDE1NiwxNDA5MzU1NiwyODYzND
-Y0MjksMjY2MjI2NzM3LC0xMjc0MzIzMDc0LDY0OTE0NTUwMiwx
-Mjc0NzMxODU0XX0=
+eyJoaXN0b3J5IjpbLTE0MzQ1MjY5ODAsLTY4NDY3MDE1NiwxND
+A5MzU1NiwyODYzNDY0MjksMjY2MjI2NzM3LC0xMjc0MzIzMDc0
+LDY0OTE0NTUwMiwxMjc0NzMxODU0XX0=
 -->

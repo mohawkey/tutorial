@@ -173,7 +173,7 @@ sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ~~~
-#### Install Portainer
+#### Portainer docker
 ~~~
 $ docker volume create portainer
 $ docker pull portainer/portainer-ce:latest
@@ -214,10 +214,11 @@ volumes:
 ~~~    
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk3MDMwMTg5LC0xMDU3NDQzOTMxLC0xMD
-UyNjgzNjU4LC0xMDU5NzQ5MjQ1LC03ODA3MTkyMDksLTEyMjM0
-NzY5OTksLTEzNjE2NDY3NjIsMzQ0NTEyNzI5LC0xMjg2OTE4ND
-MzLDE5OTYzNjYzODUsLTE0MzQ1MjY5ODAsLTY4NDY3MDE1Niwx
-NDA5MzU1NiwyODYzNDY0MjksMjY2MjI2NzM3LC0xMjc0MzIzMD
-c0LDY0OTE0NTUwMiwxMjc0NzMxODU0XX0=
+eyJoaXN0b3J5IjpbLTEwNzA4NzM5NzYsNjk3MDMwMTg5LC0xMD
+U3NDQzOTMxLC0xMDUyNjgzNjU4LC0xMDU5NzQ5MjQ1LC03ODA3
+MTkyMDksLTEyMjM0NzY5OTksLTEzNjE2NDY3NjIsMzQ0NTEyNz
+I5LC0xMjg2OTE4NDMzLDE5OTYzNjYzODUsLTE0MzQ1MjY5ODAs
+LTY4NDY3MDE1NiwxNDA5MzU1NiwyODYzNDY0MjksMjY2MjI2Nz
+M3LC0xMjc0MzIzMDc0LDY0OTE0NTUwMiwxMjc0NzMxODU0XX0=
+
 -->

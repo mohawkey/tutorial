@@ -40,11 +40,10 @@ network:
 ~~~
 ~~~
 # sudo netplan generate
-
 # sudo netplan apply
 ~~~
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NzY0Mjc4NywtODk5MjgxNDA0LDEwND
+eyJoaXN0b3J5IjpbMTIyMDMxMDk5MywtODk5MjgxNDA0LDEwND
 YzOTI2OTddfQ==
 -->

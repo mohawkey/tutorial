@@ -237,7 +237,6 @@ disable systemd-resolved service
 # sudo systemctl stop systemd-resolved.service
 ~~~
 ~~~
-version: "3"
 services:
   adguard:
     image: adguard/adguardhome
@@ -272,8 +271,6 @@ enable resolve
 pull
 ~~~
 ~~~
-version: '3.8'
-
 services:
   nginx:
     image: jc21/nginx-proxy-manager:latest
@@ -305,7 +302,6 @@ networks:
 ~~~
 ### Qbittorrent
 ~~~
----
 services:
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
@@ -362,11 +358,11 @@ networks:
     external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzU3MDI0NjUsOTYxMTUwNiwxNDM0Nz
-U2NDEzLC02MzY5MjEwMDEsMjEyODE0OTk2NSwyNDY3NjI1NTEs
-LTY4OTUxNjkzNCwxNjc1MzkxNDgzLC00MjEwODA0NTgsLTIxMT
-czMTc2MTIsLTc3OTc2MTcwMywtMTg0MTAwNzg4MCwyMDk1NjY4
-NTA4LDY5NzAzMDE4OSwtMTA1NzQ0MzkzMSwtMTA1MjY4MzY1OC
-wtMTA1OTc0OTI0NSwtNzgwNzE5MjA5LC0xMjIzNDc2OTk5LC0x
-MzYxNjQ2NzYyXX0=
+eyJoaXN0b3J5IjpbMTIxOTM3NzAxMCw5NjExNTA2LDE0MzQ3NT
+Y0MTMsLTYzNjkyMTAwMSwyMTI4MTQ5OTY1LDI0Njc2MjU1MSwt
+Njg5NTE2OTM0LDE2NzUzOTE0ODMsLTQyMTA4MDQ1OCwtMjExNz
+MxNzYxMiwtNzc5NzYxNzAzLC0xODQxMDA3ODgwLDIwOTU2Njg1
+MDgsNjk3MDMwMTg5LC0xMDU3NDQzOTMxLC0xMDUyNjgzNjU4LC
+0xMDU5NzQ5MjQ1LC03ODA3MTkyMDksLTEyMjM0NzY5OTksLTEz
+NjE2NDY3NjJdfQ==
 -->

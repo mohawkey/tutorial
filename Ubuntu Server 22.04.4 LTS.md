@@ -4,10 +4,10 @@
 
 ~~~
 sda      8:0    0 931.5G  0 disk 
-├─sda1   8:1    0     1G  0 part /boot/efi
-├─sda2   8:2    0    25G  0 part /
-├─sda3   8:3    0   200G  0 part [ZFS Partition LXD Container]
-└─sda4   8:4    0 705.5G  0 part /public
+├─sda1   8:1    0     1G  0 part /boot/efi				[EFI Boot Partition]
+├─sda2   8:2    0    25G  0 part /						[Ubuntu 22.04]
+├─sda3   8:3    0   200G  0 part 						[ZFS Partition LXD Container]
+└─sda4   8:4    0 705.5G  0 part /public				[Samba Folder]
 ~~~
 Update & Package Installation
 ~~~
@@ -291,11 +291,11 @@ networks:
 ~~~
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNzcwNjI0MCwtNjg5NTE2OTM0LDE2Nz
-UzOTE0ODMsLTQyMTA4MDQ1OCwtMjExNzMxNzYxMiwtNzc5NzYx
-NzAzLC0xODQxMDA3ODgwLDIwOTU2Njg1MDgsNjk3MDMwMTg5LC
-0xMDU3NDQzOTMxLC0xMDUyNjgzNjU4LC0xMDU5NzQ5MjQ1LC03
-ODA3MTkyMDksLTEyMjM0NzY5OTksLTEzNjE2NDY3NjIsMzQ0NT
-EyNzI5LC0xMjg2OTE4NDMzLDE5OTYzNjYzODUsLTE0MzQ1MjY5
-ODAsLTY4NDY3MDE1Nl19
+eyJoaXN0b3J5IjpbMjQ2NzYyNTUxLC02ODk1MTY5MzQsMTY3NT
+M5MTQ4MywtNDIxMDgwNDU4LC0yMTE3MzE3NjEyLC03Nzk3NjE3
+MDMsLTE4NDEwMDc4ODAsMjA5NTY2ODUwOCw2OTcwMzAxODksLT
+EwNTc0NDM5MzEsLTEwNTI2ODM2NTgsLTEwNTk3NDkyNDUsLTc4
+MDcxOTIwOSwtMTIyMzQ3Njk5OSwtMTM2MTY0Njc2MiwzNDQ1MT
+I3MjksLTEyODY5MTg0MzMsMTk5NjM2NjM4NSwtMTQzNDUyNjk4
+MCwtNjg0NjcwMTU2XX0=
 -->

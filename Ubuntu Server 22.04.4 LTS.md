@@ -102,7 +102,7 @@ sudo nano /etc/exports
 /public/nfs/qbittorrent/downloads  192.168.1.151(rw,sync,no_subtree_check)
 
 systemctl restart nfs-kernel-server
-ufw allow from client_ip to any port nfs
+ufw allow from 192.168.1.151 to any port nfs
 ~~~
 ### Install UFW
 ~~~
@@ -282,11 +282,11 @@ networks:
 ~~~
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjI4MDM4MDMsLTQyMTA4MDQ1OCwtMj
-ExNzMxNzYxMiwtNzc5NzYxNzAzLC0xODQxMDA3ODgwLDIwOTU2
-Njg1MDgsNjk3MDMwMTg5LC0xMDU3NDQzOTMxLC0xMDUyNjgzNj
-U4LC0xMDU5NzQ5MjQ1LC03ODA3MTkyMDksLTEyMjM0NzY5OTks
-LTEzNjE2NDY3NjIsMzQ0NTEyNzI5LC0xMjg2OTE4NDMzLDE5OT
-YzNjYzODUsLTE0MzQ1MjY5ODAsLTY4NDY3MDE1NiwxNDA5MzU1
-NiwyODYzNDY0MjldfQ==
+eyJoaXN0b3J5IjpbMTY3NTM5MTQ4MywtNDIxMDgwNDU4LC0yMT
+E3MzE3NjEyLC03Nzk3NjE3MDMsLTE4NDEwMDc4ODAsMjA5NTY2
+ODUwOCw2OTcwMzAxODksLTEwNTc0NDM5MzEsLTEwNTI2ODM2NT
+gsLTEwNTk3NDkyNDUsLTc4MDcxOTIwOSwtMTIyMzQ3Njk5OSwt
+MTM2MTY0Njc2MiwzNDQ1MTI3MjksLTEyODY5MTg0MzMsMTk5Nj
+M2NjM4NSwtMTQzNDUyNjk4MCwtNjg0NjcwMTU2LDE0MDkzNTU2
+LDI4NjM0NjQyOV19
 -->

@@ -2,7 +2,13 @@
 ## Main Server Installation
 ### Server Installation
 
-
+~~~
+sda      8:0    0 931.5G  0 disk 
+├─sda1   8:1    0     1G  0 part /boot/efi
+├─sda2   8:2    0    25G  0 part /
+├─sda3   8:3    0   200G  0 part [ZFS Partition LXD Container]
+└─sda4   8:4    0 705.5G  0 part /public
+~~~
 Update & Package Installation
 ~~~
 # sudo apt-get update
@@ -285,7 +291,7 @@ networks:
 ~~~
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NDk2NjA0NiwtNjg5NTE2OTM0LDE2Nz
+eyJoaXN0b3J5IjpbMTIzNzcwNjI0MCwtNjg5NTE2OTM0LDE2Nz
 UzOTE0ODMsLTQyMTA4MDQ1OCwtMjExNzMxNzYxMiwtNzc5NzYx
 NzAzLC0xODQxMDA3ODgwLDIwOTU2Njg1MDgsNjk3MDMwMTg5LC
 0xMDU3NDQzOTMxLC0xMDUyNjgzNjU4LC0xMDU5NzQ5MjQ1LC03

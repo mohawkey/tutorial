@@ -91,7 +91,8 @@ sudo apt install nfs-kernel-server
 sudo apt update
 sudo apt install nfs-common
 
-# sudo mkdir /public/nfs/qbittorrent -p
+# sudo mkdir /public/nfs/qbittorrent/downloads -p
+# sudo chown nobody:nogroup /public/nfs/qbittorrent/downloads
 ~~~
 ### Install UFW
 ~~~
@@ -271,11 +272,11 @@ networks:
 ~~~
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTg2OTg5NzIsLTQyMTA4MDQ1OCwtMj
-ExNzMxNzYxMiwtNzc5NzYxNzAzLC0xODQxMDA3ODgwLDIwOTU2
-Njg1MDgsNjk3MDMwMTg5LC0xMDU3NDQzOTMxLC0xMDUyNjgzNj
-U4LC0xMDU5NzQ5MjQ1LC03ODA3MTkyMDksLTEyMjM0NzY5OTks
-LTEzNjE2NDY3NjIsMzQ0NTEyNzI5LC0xMjg2OTE4NDMzLDE5OT
-YzNjYzODUsLTE0MzQ1MjY5ODAsLTY4NDY3MDE1NiwxNDA5MzU1
-NiwyODYzNDY0MjldfQ==
+eyJoaXN0b3J5IjpbLTM4NDg2NjA5MywtNDIxMDgwNDU4LC0yMT
+E3MzE3NjEyLC03Nzk3NjE3MDMsLTE4NDEwMDc4ODAsMjA5NTY2
+ODUwOCw2OTcwMzAxODksLTEwNTc0NDM5MzEsLTEwNTI2ODM2NT
+gsLTEwNTk3NDkyNDUsLTc4MDcxOTIwOSwtMTIyMzQ3Njk5OSwt
+MTM2MTY0Njc2MiwzNDQ1MTI3MjksLTEyODY5MTg0MzMsMTk5Nj
+M2NjM4NSwtMTQzNDUyNjk4MCwtNjg0NjcwMTU2LDE0MDkzNTU2
+LDI4NjM0NjQyOV19
 -->

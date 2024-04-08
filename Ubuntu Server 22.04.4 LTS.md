@@ -83,8 +83,14 @@ sudo smbpasswd -a mohawkey
 ~~~
 ### NFS Server
 ~~~
+** on the server
 sudo apt update
 sudo apt install nfs-kernel-server
+
+** on the client
+sudo apt update
+sudo apt install nfs-common
+
 ~~~
 ### Install UFW
 ~~~
@@ -264,11 +270,11 @@ networks:
 ~~~
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3NDY5ODM1NCwtNDIxMDgwNDU4LC0yMT
-E3MzE3NjEyLC03Nzk3NjE3MDMsLTE4NDEwMDc4ODAsMjA5NTY2
-ODUwOCw2OTcwMzAxODksLTEwNTc0NDM5MzEsLTEwNTI2ODM2NT
-gsLTEwNTk3NDkyNDUsLTc4MDcxOTIwOSwtMTIyMzQ3Njk5OSwt
-MTM2MTY0Njc2MiwzNDQ1MTI3MjksLTEyODY5MTg0MzMsMTk5Nj
-M2NjM4NSwtMTQzNDUyNjk4MCwtNjg0NjcwMTU2LDE0MDkzNTU2
-LDI4NjM0NjQyOV19
+eyJoaXN0b3J5IjpbMTc1NjQ4OTUxLC00MjEwODA0NTgsLTIxMT
+czMTc2MTIsLTc3OTc2MTcwMywtMTg0MTAwNzg4MCwyMDk1NjY4
+NTA4LDY5NzAzMDE4OSwtMTA1NzQ0MzkzMSwtMTA1MjY4MzY1OC
+wtMTA1OTc0OTI0NSwtNzgwNzE5MjA5LC0xMjIzNDc2OTk5LC0x
+MzYxNjQ2NzYyLDM0NDUxMjcyOSwtMTI4NjkxODQzMywxOTk2Mz
+Y2Mzg1LC0xNDM0NTI2OTgwLC02ODQ2NzAxNTYsMTQwOTM1NTYs
+Mjg2MzQ2NDI5XX0=
 -->

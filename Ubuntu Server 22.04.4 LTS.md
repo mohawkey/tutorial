@@ -305,6 +305,37 @@ networks:
 ~~~
 ### Qbittorrent
 ~~~
+---
+services:
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+      - 6881:6881
+      - 6881:6881/udp
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Brussels
+      - WEBUI_PORT=8080
+      - TORRENTING_PORT=6881
+    volumes:
+      - data:/config
+      - /qbittorrent/downloads:/downloads
+
+    networks:
+      - nginx-proxy-net
+    
+    
+volumes:
+  data:
+
+networks:
+  nginx-proxy-net:
+    name: nginx-proxy-net
+    external: true
 ~~~
 ### Homepage Dashboard
 ~~~
@@ -331,11 +362,11 @@ networks:
     external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYxMTUwNiwxNDM0NzU2NDEzLC02MzY5Mj
-EwMDEsMjEyODE0OTk2NSwyNDY3NjI1NTEsLTY4OTUxNjkzNCwx
-Njc1MzkxNDgzLC00MjEwODA0NTgsLTIxMTczMTc2MTIsLTc3OT
-c2MTcwMywtMTg0MTAwNzg4MCwyMDk1NjY4NTA4LDY5NzAzMDE4
-OSwtMTA1NzQ0MzkzMSwtMTA1MjY4MzY1OCwtMTA1OTc0OTI0NS
-wtNzgwNzE5MjA5LC0xMjIzNDc2OTk5LC0xMzYxNjQ2NzYyLDM0
-NDUxMjcyOV19
+eyJoaXN0b3J5IjpbLTEwNzU3MDI0NjUsOTYxMTUwNiwxNDM0Nz
+U2NDEzLC02MzY5MjEwMDEsMjEyODE0OTk2NSwyNDY3NjI1NTEs
+LTY4OTUxNjkzNCwxNjc1MzkxNDgzLC00MjEwODA0NTgsLTIxMT
+czMTc2MTIsLTc3OTc2MTcwMywtMTg0MTAwNzg4MCwyMDk1NjY4
+NTA4LDY5NzAzMDE4OSwtMTA1NzQ0MzkzMSwtMTA1MjY4MzY1OC
+wtMTA1OTc0OTI0NSwtNzgwNzE5MjA5LC0xMjIzNDc2OTk5LC0x
+MzYxNjQ2NzYyXX0=
 -->

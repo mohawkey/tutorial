@@ -308,13 +308,34 @@ networks:
 ~~~
 ### Homepage Dashboard
 ~~~
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    environment:
+      PUID: 1000
+      PGID: 1000
+    ports:
+      - 3000:3000
+    volumes:
+      - data:/app/config # Make sure your local config directory exists
+      # - /var/run/docker.sock:/var/run/docker.sock:ro # optional, for docker integrations
+    restart: unless-stopped
+
+volumes:
+  data:
+
+networks:
+  nginx-proxy-net:
+    name: nginx-proxy-net
+    external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMyMjgyNzMyLDE0MzQ3NTY0MTMsLTYzNj
-kyMTAwMSwyMTI4MTQ5OTY1LDI0Njc2MjU1MSwtNjg5NTE2OTM0
-LDE2NzUzOTE0ODMsLTQyMTA4MDQ1OCwtMjExNzMxNzYxMiwtNz
-c5NzYxNzAzLC0xODQxMDA3ODgwLDIwOTU2Njg1MDgsNjk3MDMw
-MTg5LC0xMDU3NDQzOTMxLC0xMDUyNjgzNjU4LC0xMDU5NzQ5Mj
-Q1LC03ODA3MTkyMDksLTEyMjM0NzY5OTksLTEzNjE2NDY3NjIs
-MzQ0NTEyNzI5XX0=
+eyJoaXN0b3J5IjpbOTYxMTUwNiwxNDM0NzU2NDEzLC02MzY5Mj
+EwMDEsMjEyODE0OTk2NSwyNDY3NjI1NTEsLTY4OTUxNjkzNCwx
+Njc1MzkxNDgzLC00MjEwODA0NTgsLTIxMTczMTc2MTIsLTc3OT
+c2MTcwMywtMTg0MTAwNzg4MCwyMDk1NjY4NTA4LDY5NzAzMDE4
+OSwtMTA1NzQ0MzkzMSwtMTA1MjY4MzY1OCwtMTA1OTc0OTI0NS
+wtNzgwNzE5MjA5LC0xMjIzNDc2OTk5LC0xMzYxNjQ2NzYyLDM0
+NDUxMjcyOV19
 -->

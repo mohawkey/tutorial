@@ -83,7 +83,16 @@ network:
 ~~~
 [public]
   comment = public anonymous access 
-  path = /public/samba/ 
+  path = /public/samba/public 
+  browsable = yes 
+  create mask = 0660 
+  directory mask = 0771 
+  writable = yes 
+  guest ok = yes
+  
+[media]
+  comment = public anonymous access 
+  path = /public/samba/media 
   browsable = yes 
   create mask = 0660 
   directory mask = 0771 
@@ -296,11 +305,11 @@ networks:
 ~~~
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzNjkyMTAwMSwyMTI4MTQ5OTY1LDI0Nj
-c2MjU1MSwtNjg5NTE2OTM0LDE2NzUzOTE0ODMsLTQyMTA4MDQ1
-OCwtMjExNzMxNzYxMiwtNzc5NzYxNzAzLC0xODQxMDA3ODgwLD
-IwOTU2Njg1MDgsNjk3MDMwMTg5LC0xMDU3NDQzOTMxLC0xMDUy
-NjgzNjU4LC0xMDU5NzQ5MjQ1LC03ODA3MTkyMDksLTEyMjM0Nz
-Y5OTksLTEzNjE2NDY3NjIsMzQ0NTEyNzI5LC0xMjg2OTE4NDMz
-LDE5OTYzNjYzODVdfQ==
+eyJoaXN0b3J5IjpbNjA1MTk1MjU5LC02MzY5MjEwMDEsMjEyOD
+E0OTk2NSwyNDY3NjI1NTEsLTY4OTUxNjkzNCwxNjc1MzkxNDgz
+LC00MjEwODA0NTgsLTIxMTczMTc2MTIsLTc3OTc2MTcwMywtMT
+g0MTAwNzg4MCwyMDk1NjY4NTA4LDY5NzAzMDE4OSwtMTA1NzQ0
+MzkzMSwtMTA1MjY4MzY1OCwtMTA1OTc0OTI0NSwtNzgwNzE5Mj
+A5LC0xMjIzNDc2OTk5LC0xMzYxNjQ2NzYyLDM0NDUxMjcyOSwt
+MTI4NjkxODQzM119
 -->

@@ -97,6 +97,9 @@ sudo apt install nfs-common
 # ls -ld /public/nfs/qbittorrent/downloads 
 drwxr-xr-x 2 nobody nogroup 4096 Apr  8 10:45 /public/nfs/qbittorrent/downloads
 ~~~
+~~~
+sudo nano /etc/exports
+~~~
 ### Install UFW
 ~~~
 # sudo apt install ufw
@@ -275,7 +278,7 @@ networks:
 ~~~
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5OTUxODk5MiwtNDIxMDgwNDU4LC0yMT
+eyJoaXN0b3J5IjpbLTQ5NTg1ODg5NiwtNDIxMDgwNDU4LC0yMT
 E3MzE3NjEyLC03Nzk3NjE3MDMsLTE4NDEwMDc4ODAsMjA5NTY2
 ODUwOCw2OTcwMzAxODksLTEwNTc0NDM5MzEsLTEwNTI2ODM2NT
 gsLTEwNTk3NDkyNDUsLTc4MDcxOTIwOSwtMTIyMzQ3Njk5OSwt

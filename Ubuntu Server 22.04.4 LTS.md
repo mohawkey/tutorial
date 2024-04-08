@@ -346,6 +346,8 @@ services:
       - data:/app/config # Make sure your local config directory exists
       # - /var/run/docker.sock:/var/run/docker.sock:ro # optional, for docker integrations
     restart: unless-stopped
+    networks:
+      - nginx-proxy-net
 
 volumes:
   data:
@@ -356,11 +358,11 @@ networks:
     external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzY1MjcyMjQsMTIxOTM3NzAxMCw5Nj
-ExNTA2LDE0MzQ3NTY0MTMsLTYzNjkyMTAwMSwyMTI4MTQ5OTY1
-LDI0Njc2MjU1MSwtNjg5NTE2OTM0LDE2NzUzOTE0ODMsLTQyMT
-A4MDQ1OCwtMjExNzMxNzYxMiwtNzc5NzYxNzAzLC0xODQxMDA3
-ODgwLDIwOTU2Njg1MDgsNjk3MDMwMTg5LC0xMDU3NDQzOTMxLC
-0xMDUyNjgzNjU4LC0xMDU5NzQ5MjQ1LC03ODA3MTkyMDksLTEy
-MjM0NzY5OTldfQ==
+eyJoaXN0b3J5IjpbLTk5OTAxNDk3MSwtMTc3NjUyNzIyNCwxMj
+E5Mzc3MDEwLDk2MTE1MDYsMTQzNDc1NjQxMywtNjM2OTIxMDAx
+LDIxMjgxNDk5NjUsMjQ2NzYyNTUxLC02ODk1MTY5MzQsMTY3NT
+M5MTQ4MywtNDIxMDgwNDU4LC0yMTE3MzE3NjEyLC03Nzk3NjE3
+MDMsLTE4NDEwMDc4ODAsMjA5NTY2ODUwOCw2OTcwMzAxODksLT
+EwNTc0NDM5MzEsLTEwNTI2ODM2NTgsLTEwNTk3NDkyNDUsLTc4
+MDcxOTIwOV19
 -->

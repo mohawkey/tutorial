@@ -1,5 +1,5 @@
 # Ubuntu Server 22.04.4 LTS
-## Ubuntu 22.04.04 Host 
+## Ubuntu Host Installation
 ### Server Installation
 
 ~~~
@@ -291,7 +291,7 @@ networks:
 ~~~
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODgyOTc5NDgsMjQ2NzYyNTUxLC02OD
+eyJoaXN0b3J5IjpbLTE4MjYxNjg0ODAsMjQ2NzYyNTUxLC02OD
 k1MTY5MzQsMTY3NTM5MTQ4MywtNDIxMDgwNDU4LC0yMTE3MzE3
 NjEyLC03Nzk3NjE3MDMsLTE4NDEwMDc4ODAsMjA5NTY2ODUwOC
 w2OTcwMzAxODksLTEwNTc0NDM5MzEsLTEwNTI2ODM2NTgsLTEw

@@ -11,9 +11,7 @@ sda      8:0    0 931.5G  0 disk
 ~~~
 ~~~
 mkdir /public/samba/public -p
-mkdir /public/samba/media/movies -p
-mkdir /public/samba/media/pictures -p
-mkdir /public/samba/media/series -p
+mkdir /public/samba/media -p
 mkdir /public/container/qbittorrent/downloads -p
 ~~~
 Update & Package Installation
@@ -358,11 +356,11 @@ networks:
     external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxOTM3NzAxMCw5NjExNTA2LDE0MzQ3NT
-Y0MTMsLTYzNjkyMTAwMSwyMTI4MTQ5OTY1LDI0Njc2MjU1MSwt
-Njg5NTE2OTM0LDE2NzUzOTE0ODMsLTQyMTA4MDQ1OCwtMjExNz
-MxNzYxMiwtNzc5NzYxNzAzLC0xODQxMDA3ODgwLDIwOTU2Njg1
-MDgsNjk3MDMwMTg5LC0xMDU3NDQzOTMxLC0xMDUyNjgzNjU4LC
-0xMDU5NzQ5MjQ1LC03ODA3MTkyMDksLTEyMjM0NzY5OTksLTEz
-NjE2NDY3NjJdfQ==
+eyJoaXN0b3J5IjpbLTE3NzY1MjcyMjQsMTIxOTM3NzAxMCw5Nj
+ExNTA2LDE0MzQ3NTY0MTMsLTYzNjkyMTAwMSwyMTI4MTQ5OTY1
+LDI0Njc2MjU1MSwtNjg5NTE2OTM0LDE2NzUzOTE0ODMsLTQyMT
+A4MDQ1OCwtMjExNzMxNzYxMiwtNzc5NzYxNzAzLC0xODQxMDA3
+ODgwLDIwOTU2Njg1MDgsNjk3MDMwMTg5LC0xMDU3NDQzOTMxLC
+0xMDUyNjgzNjU4LC0xMDU5NzQ5MjQ1LC03ODA3MTkyMDksLTEy
+MjM0NzY5OTldfQ==
 -->

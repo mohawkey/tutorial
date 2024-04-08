@@ -9,6 +9,11 @@ sda      8:0    0 931.5G  0 disk
 ├─sda3   8:3    0   200G  0 part 						[ZFS Partition LXD Container]
 └─sda4   8:4    0 705.5G  0 part /public				[Samba Folder]
 ~~~
+~~~
+mkdir /public/samba/public -p
+mkdir /public/samba/media/movies -p
+mkdir /public/container/
+~~~
 Update & Package Installation
 ~~~
 # sudo apt-get update
@@ -291,11 +296,11 @@ networks:
 ~~~
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyODE0OTk2NSwyNDY3NjI1NTEsLTY4OT
-UxNjkzNCwxNjc1MzkxNDgzLC00MjEwODA0NTgsLTIxMTczMTc2
-MTIsLTc3OTc2MTcwMywtMTg0MTAwNzg4MCwyMDk1NjY4NTA4LD
-Y5NzAzMDE4OSwtMTA1NzQ0MzkzMSwtMTA1MjY4MzY1OCwtMTA1
-OTc0OTI0NSwtNzgwNzE5MjA5LC0xMjIzNDc2OTk5LC0xMzYxNj
-Q2NzYyLDM0NDUxMjcyOSwtMTI4NjkxODQzMywxOTk2MzY2Mzg1
-LC0xNDM0NTI2OTgwXX0=
+eyJoaXN0b3J5IjpbLTMyOTAxMjU5OCwyMTI4MTQ5OTY1LDI0Nj
+c2MjU1MSwtNjg5NTE2OTM0LDE2NzUzOTE0ODMsLTQyMTA4MDQ1
+OCwtMjExNzMxNzYxMiwtNzc5NzYxNzAzLC0xODQxMDA3ODgwLD
+IwOTU2Njg1MDgsNjk3MDMwMTg5LC0xMDU3NDQzOTMxLC0xMDUy
+NjgzNjU4LC0xMDU5NzQ5MjQ1LC03ODA3MTkyMDksLTEyMjM0Nz
+Y5OTksLTEzNjE2NDY3NjIsMzQ0NTEyNzI5LC0xMjg2OTE4NDMz
+LDE5OTYzNjYzODVdfQ==
 -->

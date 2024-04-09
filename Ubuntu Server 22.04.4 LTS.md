@@ -14,11 +14,13 @@ sda      8:0    0 931.5G  0 disk
 sdb      9:0    0 999.9G  0 disk 
 └─sdb1   9:1    0 999.9G  0 part /1TB					[Samba Folder]
 ~~~
-setup
+Server Installation - hostname en ip
 ~~~
 ubuntu.home.io	192.168.1.150
-	[Container]	docker-151	
+	[Container]	docker-151	192.168.1.151
+	[Container]	docker-152	192.168.1.152
 ~~~
+Server Installation - setup
 ~~~
 mkdir /public/samba/public -p
 mkdir /public/samba/media -p
@@ -368,7 +370,7 @@ networks:
     external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MTkyMDExNywtOTk5MDE0OTcxLC0xNz
+eyJoaXN0b3J5IjpbLTg4MjY4NTYwNSwtOTk5MDE0OTcxLC0xNz
 c2NTI3MjI0LDEyMTkzNzcwMTAsOTYxMTUwNiwxNDM0NzU2NDEz
 LC02MzY5MjEwMDEsMjEyODE0OTk2NSwyNDY3NjI1NTEsLTY4OT
 UxNjkzNCwxNjc1MzkxNDgzLC00MjEwODA0NTgsLTIxMTczMTc2

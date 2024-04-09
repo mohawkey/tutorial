@@ -1,8 +1,10 @@
-$ psql --host=portainer.home.io --port=5432 --username=mohawkey --dbname=mohawkey
-******************************************************************************************************************************************************
+# PostgreSQL
+## Connecting to the database
 ~~~
-version: "3.8"
-
+$ psql --host=portainer.home.io --port=5432 --username=mohawkey --dbname=mohawkey
+~~~
+## Installation
+~~~
 services:
   db:
     image: postgres:latest
@@ -32,7 +34,7 @@ volumes:
   postgres-data:
   pgadmin-data:
 ~~~
-******************************************************************************************************************************************************
+or
 ~~~
 version: "3.9"
 
@@ -53,4 +55,6 @@ services:
 volumes:
   postgres
 ~~~
-******************************************************************************************************************************************************
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTg0MDk4MjA3MF19
+-->

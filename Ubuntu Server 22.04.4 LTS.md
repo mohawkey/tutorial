@@ -1,4 +1,5 @@
 # Ubuntu Server 22.04.4 LTS
+Ubuntu Server installation with containers and sambashare
 ## Ubuntu Host Installation
 ### Server Installation
 Server Installation - Partition Schema
@@ -8,6 +9,8 @@ sda      8:0    0 931.5G  0 disk
 ├─sda2   8:2    0    25G  0 part /						[Ubuntu 22.04]
 ├─sda3   8:3    0   200G  0 part 						[ZFS Partition LXD Container]
 └─sda4   8:4    0 705.5G  0 part /public				[Samba Folder]
+sdb      8:0    0 931.5G  0 disk 
+├─sdb1
 ~~~
 ~~~
 mkdir /public/samba/public -p
@@ -358,11 +361,11 @@ networks:
     external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5OTAxNDk3MSwtMTc3NjUyNzIyNCwxMj
-E5Mzc3MDEwLDk2MTE1MDYsMTQzNDc1NjQxMywtNjM2OTIxMDAx
-LDIxMjgxNDk5NjUsMjQ2NzYyNTUxLC02ODk1MTY5MzQsMTY3NT
-M5MTQ4MywtNDIxMDgwNDU4LC0yMTE3MzE3NjEyLC03Nzk3NjE3
-MDMsLTE4NDEwMDc4ODAsMjA5NTY2ODUwOCw2OTcwMzAxODksLT
-EwNTc0NDM5MzEsLTEwNTI2ODM2NTgsLTEwNTk3NDkyNDUsLTc4
-MDcxOTIwOV19
+eyJoaXN0b3J5IjpbMTA3NTg4ODY4MiwtOTk5MDE0OTcxLC0xNz
+c2NTI3MjI0LDEyMTkzNzcwMTAsOTYxMTUwNiwxNDM0NzU2NDEz
+LC02MzY5MjEwMDEsMjEyODE0OTk2NSwyNDY3NjI1NTEsLTY4OT
+UxNjkzNCwxNjc1MzkxNDgzLC00MjEwODA0NTgsLTIxMTczMTc2
+MTIsLTc3OTc2MTcwMywtMTg0MTAwNzg4MCwyMDk1NjY4NTA4LD
+Y5NzAzMDE4OSwtMTA1NzQ0MzkzMSwtMTA1MjY4MzY1OCwtMTA1
+OTc0OTI0NV19
 -->

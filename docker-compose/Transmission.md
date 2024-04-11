@@ -12,12 +12,13 @@
 
 $ lxc config device add docker-151 transmission disk \
 	source=/public/container/transmission \
-	path=/public
-
+	path=/transmission
+~~~
+~~~
 $ lxc config device show docker-151
-
+~~~
+~~~
 $ lxc config device remove docker-151 transmission
-
 ~~~
 ## docker-compose.yaml
 ~~~yaml
@@ -55,5 +56,5 @@ networks:
 	external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTg4MTE4OTUsMTE1MTIxMTU5NF19
+eyJoaXN0b3J5IjpbLTIxODg3MjY4MiwxMTUxMjExNTk0XX0=
 -->

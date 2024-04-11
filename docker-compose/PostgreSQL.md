@@ -1,17 +1,6 @@
 
 # PostgreSQL
 ## docker-compose.yaml
-~~~
-version: "3"
-~~~
-## stack.env
-~~~
-USER
-PASSConnecting to the database
-~~~
-$ psql --host=portainer.home.io --port=5432 --username=mohawkey --dbname=mohawkey
-~~~
-## docker-compose.yaml
 ~~~yaml
 services:
   db:
@@ -43,7 +32,7 @@ volumes:
   pgadmin-data:
 ~~~
 ## docker-compose.yaml
-~~~
+~~~yaml
 version: "3.9"
 
 services:
@@ -63,6 +52,10 @@ services:
 volumes:
   postgres
 ~~~
+## connect
+~~~
+$ psql --host=portainer.home.io --port=5432 --username=mohawkey --dbname=mohawkey
+~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MTk1MDE2MCwtNzcwMzI4OTM5XX0=
+eyJoaXN0b3J5IjpbLTE5ODMwMDM1MTIsLTc3MDMyODkzOV19
 -->

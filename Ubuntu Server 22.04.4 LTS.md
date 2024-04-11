@@ -245,9 +245,9 @@ $ docker stop portainer
 $ docker rm portainer
 $ docker pull portainer/portainer-ce:latest
 $ docker run -d -p 8000:8000 -p 9443:9443 \
---name portainer --restart=always \
--v /var/run/docker.sock:/var/run/docker.sock \
--v portainer:/data portainer/portainer-ce:latest
+    --name portainer --restart=always \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v portainer:/data portainer/portainer-ce:latest
 ~~~
 #### adGuard docker
 disable systemd-resolved service
@@ -379,7 +379,7 @@ networks:
     external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNDY4MDY1MywxNzQxODM4MTI1LC04OD
+eyJoaXN0b3J5IjpbLTk5NTQ4NDQ2NywxNzQxODM4MTI1LC04OD
 I2ODU2MDUsLTk5OTAxNDk3MSwtMTc3NjUyNzIyNCwxMjE5Mzc3
 MDEwLDk2MTE1MDYsMTQzNDc1NjQxMywtNjM2OTIxMDAxLDIxMj
 gxNDk5NjUsMjQ2NzYyNTUxLC02ODk1MTY5MzQsMTY3NTM5MTQ4

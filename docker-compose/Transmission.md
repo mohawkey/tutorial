@@ -10,7 +10,10 @@
 # chown nobody:nogroup /public/container/transmission/downloads
 # chown nobody:nogroup /public/container/transmission/watch
 
-lxc config device add warez usb-drive disk source=/media/usb-drive path=/storage/usb-drive
+$ lxc config device add docker-151 usb-drive disk \
+	source=/public/container/transmission \
+	path=/public
+
 $ lxc config device show warez
 
 $ sudo lxc config device remove warez usb-drive
@@ -52,5 +55,5 @@ networks:
 	external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4NjM3MzM0OSwxMTUxMjExNTk0XX0=
+eyJoaXN0b3J5IjpbLTg1Mjk5ODI4MCwxMTUxMjExNTk0XX0=
 -->

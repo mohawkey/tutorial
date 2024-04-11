@@ -230,7 +230,7 @@ sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ~~~
-#### Portainer docker
+#### Install Portainer docker
 ~~~
 $ docker volume create portainer
 $ docker pull portainer/portainer-ce:latest
@@ -238,6 +238,16 @@ $ docker run -d -p 8000:8000 -p 9443:9443 \
     --name portainer --restart=always \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer:/data portainer/portainer-ce:latest
+~~~
+#### Upgrade Portainer
+~~~
+$ docker stop portainer
+$ docker rm portainer
+$ docker pull portainer/portainer-ce:latest
+$ docker run -d -p 8000:8000 -p 9443:9443 \
+--name portainer --restart=always \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v portainer:/data portainer/portainer-ce:latest
 ~~~
 #### adGuard docker
 disable systemd-resolved service
@@ -369,11 +379,11 @@ networks:
     external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MTgzODEyNSwtODgyNjg1NjA1LC05OT
-kwMTQ5NzEsLTE3NzY1MjcyMjQsMTIxOTM3NzAxMCw5NjExNTA2
-LDE0MzQ3NTY0MTMsLTYzNjkyMTAwMSwyMTI4MTQ5OTY1LDI0Nj
-c2MjU1MSwtNjg5NTE2OTM0LDE2NzUzOTE0ODMsLTQyMTA4MDQ1
-OCwtMjExNzMxNzYxMiwtNzc5NzYxNzAzLC0xODQxMDA3ODgwLD
-IwOTU2Njg1MDgsNjk3MDMwMTg5LC0xMDU3NDQzOTMxLC0xMDUy
-NjgzNjU4XX0=
+eyJoaXN0b3J5IjpbMTkxNDY4MDY1MywxNzQxODM4MTI1LC04OD
+I2ODU2MDUsLTk5OTAxNDk3MSwtMTc3NjUyNzIyNCwxMjE5Mzc3
+MDEwLDk2MTE1MDYsMTQzNDc1NjQxMywtNjM2OTIxMDAxLDIxMj
+gxNDk5NjUsMjQ2NzYyNTUxLC02ODk1MTY5MzQsMTY3NTM5MTQ4
+MywtNDIxMDgwNDU4LC0yMTE3MzE3NjEyLC03Nzk3NjE3MDMsLT
+E4NDEwMDc4ODAsMjA5NTY2ODUwOCw2OTcwMzAxODksLTEwNTc0
+NDM5MzFdfQ==
 -->

@@ -183,6 +183,7 @@ $ lxc restart docker-151
 #### ip
 ~~~
 # sudo nano /etc/netplan/network.yaml
+~~~
 ~~~yaml
 network:
   version: 2
@@ -196,7 +197,6 @@ network:
            via: 192.168.1.1
       nameservers:
         addresses: [192.168.1.151, 1.1.1.1]
-~~~
 ~~~ 
 #### Install docker
 ~~~
@@ -243,7 +243,7 @@ disable systemd-resolved service
 # sudo systemctl disable systemd-resolved.service
 # sudo systemctl stop systemd-resolved.service
 ~~~
-~~~
+~~~yaml
 services:
   adguard:
     image: adguard/adguardhome
@@ -277,7 +277,7 @@ enable resolve
 ~~~
 pull
 ~~~
-~~~
+~~~yaml
 services:
   nginx:
     image: jc21/nginx-proxy-manager:latest
@@ -308,7 +308,7 @@ networks:
     external: true
 ~~~
 ### Qbittorrent
-~~~
+~~~yaml
 services:
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
@@ -341,7 +341,7 @@ networks:
     external: true
 ~~~
 ### Homepage Dashboard
-~~~
+~~~yaml
 services:
   homepage:
     image: ghcr.io/gethomepage/homepage:latest
@@ -367,11 +367,11 @@ networks:
     external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTg4MDk5MDIsLTk5NTQ4NDQ2NywxNz
-QxODM4MTI1LC04ODI2ODU2MDUsLTk5OTAxNDk3MSwtMTc3NjUy
-NzIyNCwxMjE5Mzc3MDEwLDk2MTE1MDYsMTQzNDc1NjQxMywtNj
-M2OTIxMDAxLDIxMjgxNDk5NjUsMjQ2NzYyNTUxLC02ODk1MTY5
-MzQsMTY3NTM5MTQ4MywtNDIxMDgwNDU4LC0yMTE3MzE3NjEyLC
-03Nzk3NjE3MDMsLTE4NDEwMDc4ODAsMjA5NTY2ODUwOCw2OTcw
-MzAxODldfQ==
+eyJoaXN0b3J5IjpbMTEzOTkwODM2NiwtOTk1NDg0NDY3LDE3ND
+E4MzgxMjUsLTg4MjY4NTYwNSwtOTk5MDE0OTcxLC0xNzc2NTI3
+MjI0LDEyMTkzNzcwMTAsOTYxMTUwNiwxNDM0NzU2NDEzLC02Mz
+Y5MjEwMDEsMjEyODE0OTk2NSwyNDY3NjI1NTEsLTY4OTUxNjkz
+NCwxNjc1MzkxNDgzLC00MjEwODA0NTgsLTIxMTczMTc2MTIsLT
+c3OTc2MTcwMywtMTg0MTAwNzg4MCwyMDk1NjY4NTA4LDY5NzAz
+MDE4OV19
 -->

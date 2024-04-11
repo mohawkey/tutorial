@@ -18,7 +18,7 @@ services:
       - PEERPORT= #optional
       - HOST_WHITELIST= #optional
     volumes:
-      - /path/to/data:/config
+      - data:/config
       - /path/to/downloads:/downloads
       - /path/to/watch/folder:/watch
     ports:
@@ -27,10 +27,14 @@ services:
       - 51413:51413/udp
     restart: unless-stopped
     
-volumes: 
-data: config: networks: nginx-proxy-net: name: nginx-proxy-net external: true
-```
+volumes:
+	data:
+	
+networks: 
+	nginx-proxy-net: 
+	name: nginx-proxy-net 
+	external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxMjcwNTgwN119
+eyJoaXN0b3J5IjpbMzc0MjA5NjY4XX0=
 -->

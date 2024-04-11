@@ -183,8 +183,19 @@ $ lxc restart docker-151
 #### ip
 ~~~
 # sudo nano /etc/netplan/network.yaml
-~~~
-
+~~~yaml
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eth0:
+      dhcp4: false
+      addresses: [192.168.1.151/24]
+      routes:
+         - to: default
+           via: 192.168.1.1
+      nameservers:
+        addresses: [192.168.1.151, 1.1.1.1]
 ~~~
 ~~~ 
 #### Install docker
@@ -356,11 +367,11 @@ networks:
     external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc2MDExNzk3LC05OTU0ODQ0NjcsMTc0MT
-gzODEyNSwtODgyNjg1NjA1LC05OTkwMTQ5NzEsLTE3NzY1Mjcy
-MjQsMTIxOTM3NzAxMCw5NjExNTA2LDE0MzQ3NTY0MTMsLTYzNj
-kyMTAwMSwyMTI4MTQ5OTY1LDI0Njc2MjU1MSwtNjg5NTE2OTM0
-LDE2NzUzOTE0ODMsLTQyMTA4MDQ1OCwtMjExNzMxNzYxMiwtNz
-c5NzYxNzAzLC0xODQxMDA3ODgwLDIwOTU2Njg1MDgsNjk3MDMw
-MTg5XX0=
+eyJoaXN0b3J5IjpbLTE4OTg4MDk5MDIsLTk5NTQ4NDQ2NywxNz
+QxODM4MTI1LC04ODI2ODU2MDUsLTk5OTAxNDk3MSwtMTc3NjUy
+NzIyNCwxMjE5Mzc3MDEwLDk2MTE1MDYsMTQzNDc1NjQxMywtNj
+M2OTIxMDAxLDIxMjgxNDk5NjUsMjQ2NzYyNTUxLC02ODk1MTY5
+MzQsMTY3NTM5MTQ4MywtNDIxMDgwNDU4LC0yMTE3MzE3NjEyLC
+03Nzk3NjE3MDMsLTE4NDEwMDc4ODAsMjA5NTY2ODUwOCw2OTcw
+MzAxODldfQ==
 -->

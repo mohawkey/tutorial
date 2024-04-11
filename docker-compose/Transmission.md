@@ -10,13 +10,13 @@
 # chown nobody:nogroup /public/container/transmission/downloads
 # chown nobody:nogroup /public/container/transmission/watch
 
-$ lxc config device add docker-151 usb-drive disk \
+$ lxc config device add docker-151 transmission disk \
 	source=/public/container/transmission \
 	path=/public
 
-$ lxc config device show warez
+$ lxc config device show docker-151
 
-$ sudo lxc config device remove warez usb-drive
+$ lxc config device remove docker-151 transmission
 
 ~~~
 ## docker-compose.yaml
@@ -55,5 +55,5 @@ networks:
 	external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1Mjk5ODI4MCwxMTUxMjExNTk0XX0=
+eyJoaXN0b3J5IjpbLTE5MTg4MTE4OTUsMTE1MTIxMTU5NF19
 -->

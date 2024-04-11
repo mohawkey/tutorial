@@ -2,6 +2,7 @@
 # PostgreSQL
 ## docker-compose.yaml
 ~~~yaml
+---
 services:
   db:
     image: postgres:latest
@@ -33,7 +34,7 @@ volumes:
 ~~~
 ## docker-compose.yaml
 ~~~yaml
-version: "3.9"
+---
 
 services:
   postgres:
@@ -57,5 +58,5 @@ volumes:
 $ psql --host=portainer.home.io --port=5432 --username=mohawkey --dbname=mohawkey
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODMwMDM1MTIsLTc3MDMyODkzOV19
+eyJoaXN0b3J5IjpbLTk0Mjk5MjQzOCwtNzcwMzI4OTM5XX0=
 -->

@@ -1,7 +1,6 @@
 # Transmission
-## Docker
-~~~
-```yaml
+## docker-compose.yaml
+~~~yaml
 ---
 services:
   transmission:
@@ -36,5 +35,5 @@ networks:
 	external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc0MjA5NjY4XX0=
+eyJoaXN0b3J5IjpbMTE1MTIxMTU5NF19
 -->

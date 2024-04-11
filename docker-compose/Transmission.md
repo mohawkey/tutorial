@@ -39,8 +39,8 @@ services:
       - HOST_WHITELIST= #optional
     volumes:
       - data:/config
-      - /path/to/downloads:/downloads
-      - /path/to/watch/folder:/watch
+      - /transmission/downloads:/downloads
+      - /transmission/watch:/watch
     ports:
       - 9091:9091
       - 51413:51413
@@ -56,5 +56,5 @@ networks:
 	external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NjY3NDk2NSwxMTUxMjExNTk0XX0=
+eyJoaXN0b3J5IjpbLTE0NDg2OTM5MzAsMTE1MTIxMTU5NF19
 -->

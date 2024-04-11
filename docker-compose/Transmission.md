@@ -1,7 +1,15 @@
 # Transmission
 ## configuration
 ~~~
-mkdir /public/container/transmission/downloads
+# mkdir /public/container/transmission/downloads -p
+# mkdir /public/container/transmission/watch -p
+
+# chmod 777 /public/container/transmission/downloads
+# chmod 777 /public/container/transmission/watch
+
+# chown nobody:nogroup /public/container/transmission/downloads
+# chown nobody:nogroup /public/container/transmission/watch
+
 lxc config device add warez usb-drive disk source=/media/usb-drive path=/storage/usb-drive
 $ lxc config device show warez
 
@@ -44,5 +52,5 @@ networks:
 	external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA4MjQwNjQ5LDExNTEyMTE1OTRdfQ==
+eyJoaXN0b3J5IjpbLTI4NjM3MzM0OSwxMTUxMjExNTk0XX0=
 -->

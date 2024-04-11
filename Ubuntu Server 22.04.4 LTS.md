@@ -114,30 +114,6 @@ adding a user
 ~~~
 sudo smbpasswd -a mohawkey
 ~~~
-### NFS Server
-~~~
-** on the server
-sudo apt update
-sudo apt install nfs-kernel-server
-
-** on the client
-sudo apt update
-sudo apt install nfs-common
-
-# sudo mkdir /public/nfs/qbittorrent/downloads -p
-# sudo chown nobody:nogroup /public/nfs/qbittorrent/downloads
-
-# ls -ld /public/nfs/qbittorrent/downloads 
-drwxr-xr-x 2 nobody nogroup 4096 Apr  8 10:45 /public/nfs/qbittorrent/downloads
-~~~
-~~~
-sudo nano /etc/exports
-/public/nfs/qbittorrent/downloads  192.168.1.151(rw,sync,no_subtree_check)
-
-systemctl restart nfs-kernel-server
-ufw allow from 192.168.1.151 to any port nfs
-( ufw allow nfs )
-~~~
 ### Install UFW
 ~~~
 # sudo apt install ufw
@@ -379,11 +355,11 @@ networks:
     external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5NTQ4NDQ2NywxNzQxODM4MTI1LC04OD
-I2ODU2MDUsLTk5OTAxNDk3MSwtMTc3NjUyNzIyNCwxMjE5Mzc3
-MDEwLDk2MTE1MDYsMTQzNDc1NjQxMywtNjM2OTIxMDAxLDIxMj
-gxNDk5NjUsMjQ2NzYyNTUxLC02ODk1MTY5MzQsMTY3NTM5MTQ4
-MywtNDIxMDgwNDU4LC0yMTE3MzE3NjEyLC03Nzk3NjE3MDMsLT
-E4NDEwMDc4ODAsMjA5NTY2ODUwOCw2OTcwMzAxODksLTEwNTc0
-NDM5MzFdfQ==
+eyJoaXN0b3J5IjpbLTY2NzUwMjU1MywtOTk1NDg0NDY3LDE3ND
+E4MzgxMjUsLTg4MjY4NTYwNSwtOTk5MDE0OTcxLC0xNzc2NTI3
+MjI0LDEyMTkzNzcwMTAsOTYxMTUwNiwxNDM0NzU2NDEzLC02Mz
+Y5MjEwMDEsMjEyODE0OTk2NSwyNDY3NjI1NTEsLTY4OTUxNjkz
+NCwxNjc1MzkxNDgzLC00MjEwODA0NTgsLTIxMTczMTc2MTIsLT
+c3OTc2MTcwMywtMTg0MTAwNzg4MCwyMDk1NjY4NTA4LDY5NzAz
+MDE4OV19
 -->

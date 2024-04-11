@@ -10,7 +10,7 @@
 # chown nobody:nogroup /public/container/transmission/downloads
 # chown nobody:nogroup /public/container/transmission/watch
 
-$ lxc config device add docker-151 transmission disk \
+# lxc config device add docker-151 transmission disk \
 	source=/public/container/transmission \
 	path=/transmission
 ~~~
@@ -56,5 +56,5 @@ networks:
 	external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxODg3MjY4MiwxMTUxMjExNTk0XX0=
+eyJoaXN0b3J5IjpbMTE3NjY3NDk2NSwxMTUxMjExNTk0XX0=
 -->

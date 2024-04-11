@@ -31,12 +31,12 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe\Brussels
-      - TRANSMISSION_WEB_HOME= #optional
-      - USER= #optional
-      - PASS= #optional
-      - WHITELIST= #optional
-      - PEERPORT= #optional
-      - HOST_WHITELIST= #optional
+#      - TRANSMISSION_WEB_HOME= #optional
+#      - USER= #optional
+#      - PASS= #optional
+#      - WHITELIST= #optional
+#      - PEERPORT= #optional
+#      - HOST_WHITELIST= #optional
     volumes:
       - data:/config
       - /transmission/downloads:/downloads
@@ -48,13 +48,14 @@ services:
     restart: unless-stopped
     
 volumes:
-	data:
-	
+  data:
+
 networks: 
-	nginx-proxy-net: 
-	name: nginx-proxy-net 
-	external: true
+  nginx-proxy-net: 
+    name: nginx-proxy-net 
+    external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDg2OTM5MzAsMTE1MTIxMTU5NF19
+eyJoaXN0b3J5IjpbODUyNTYwMTg2LC0xNDQ4NjkzOTMwLDExNT
+EyMTE1OTRdfQ==
 -->

@@ -1,4 +1,13 @@
 # Transmission
+## configuration
+~~~
+mkdir /public/container/transmission/downloads
+lxc config device add warez usb-drive disk source=/media/usb-drive path=/storage/usb-drive
+$ lxc config device show warez
+
+$ sudo lxc config device remove warez usb-drive
+
+~~~
 ## docker-compose.yaml
 ~~~yaml
 ---
@@ -35,5 +44,5 @@ networks:
 	external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1MTIxMTU5NF19
+eyJoaXN0b3J5IjpbNjA4MjQwNjQ5LDExNTEyMTE1OTRdfQ==
 -->

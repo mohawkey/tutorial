@@ -31,6 +31,7 @@ Update & Package Installation
 # sudo apt-get update
 # sudo apt-get upgrade
 # sudo apt-get install -y nano net-tools zfsutils dnsutils
+# sudo apt-get install -y bash-completion
 ~~~
 ### Configuring Static IP and Bridged Network
 ~~~
@@ -367,11 +368,11 @@ networks:
     external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzOTkwODM2NiwtOTk1NDg0NDY3LDE3ND
-E4MzgxMjUsLTg4MjY4NTYwNSwtOTk5MDE0OTcxLC0xNzc2NTI3
-MjI0LDEyMTkzNzcwMTAsOTYxMTUwNiwxNDM0NzU2NDEzLC02Mz
-Y5MjEwMDEsMjEyODE0OTk2NSwyNDY3NjI1NTEsLTY4OTUxNjkz
-NCwxNjc1MzkxNDgzLC00MjEwODA0NTgsLTIxMTczMTc2MTIsLT
-c3OTc2MTcwMywtMTg0MTAwNzg4MCwyMDk1NjY4NTA4LDY5NzAz
-MDE4OV19
+eyJoaXN0b3J5IjpbMTQ0MTA0ODI5MiwxMTM5OTA4MzY2LC05OT
+U0ODQ0NjcsMTc0MTgzODEyNSwtODgyNjg1NjA1LC05OTkwMTQ5
+NzEsLTE3NzY1MjcyMjQsMTIxOTM3NzAxMCw5NjExNTA2LDE0Mz
+Q3NTY0MTMsLTYzNjkyMTAwMSwyMTI4MTQ5OTY1LDI0Njc2MjU1
+MSwtNjg5NTE2OTM0LDE2NzUzOTE0ODMsLTQyMTA4MDQ1OCwtMj
+ExNzMxNzYxMiwtNzc5NzYxNzAzLC0xODQxMDA3ODgwLDIwOTU2
+Njg1MDhdfQ==
 -->

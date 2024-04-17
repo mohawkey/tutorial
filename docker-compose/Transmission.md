@@ -1,13 +1,13 @@
 # Transmission
 ## configuration
 ~~~
-# mkdir /public/container/transmission/downloads -p
+# mkdir /public/container/transmission/downloads/complete -p
 # mkdir /public/container/transmission/watch -p
 
-# chmod 777 /public/container/transmission/downloads
+# chmod 777 /public/container/transmission/downloads -R
 # chmod 777 /public/container/transmission/watch
 
-# chown nobody:nogroup /public/container/transmission/downloads
+# chown nobody:nogroup /public/container/transmission/downloads -R
 # chown nobody:nogroup /public/container/transmission/watch
 
 # lxc config device add docker-151 transmission disk \
@@ -56,6 +56,6 @@ networks:
     external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUyNTYwMTg2LC0xNDQ4NjkzOTMwLDExNT
-EyMTE1OTRdfQ==
+eyJoaXN0b3J5IjpbLTIxMDcxMTQ4MjQsODUyNTYwMTg2LC0xND
+Q4NjkzOTMwLDExNTEyMTE1OTRdfQ==
 -->

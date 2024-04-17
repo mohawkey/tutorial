@@ -69,7 +69,9 @@ networks:
 ~~~
 Settings -> Download Client -> Transmission
 
+Remote Port mapping
+192.168.1.151		/downloads/complete		/downloads.complete
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTkyMTQzNDQyLDE0MDI2MjIzNjZdfQ==
+eyJoaXN0b3J5IjpbLTE4NTk2Mjc0MzEsMTQwMjYyMjM2Nl19
 -->

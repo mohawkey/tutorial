@@ -35,7 +35,6 @@ volumes:
 ## docker-compose.yaml
 ~~~yaml
 ---
-
 services:
   postgres:
     image: postgres:16.2-alpine
@@ -49,9 +48,16 @@ services:
       - POSTGRES_DB=${PGSQL_DB}
     volumes:
       - postgres:/var/lib/postgresql/data
+    networks: 
+      - nginx-proxy-net
       
 volumes:
   postgres:
+
+networks: 
+  nginx-proxy-net: 
+    name: nginx-proxy-net 
+    external: true
 ~~~
 ## connect
 ~~~

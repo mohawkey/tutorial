@@ -51,7 +51,7 @@ services:
       - postgres:/var/lib/postgresql/data
       
 volumes:
-  postgres
+  postgres:
 ~~~
 ## connect
 ~~~

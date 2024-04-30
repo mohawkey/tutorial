@@ -25,8 +25,13 @@ volumes:
   crafty-logs:
   crafty-servers:
   crafty-config:
-  crafty-backups:
+  crafty-import:
+
+networks: 
+  nginx-proxy-net: 
+    name: nginx-proxy-net 
+    external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2Mjc5OTc4NiwxOTM2ODQxMzYwXX0=
+eyJoaXN0b3J5IjpbLTE0NjQxOTM5NjcsMTkzNjg0MTM2MF19
 -->

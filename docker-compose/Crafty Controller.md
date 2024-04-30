@@ -2,7 +2,7 @@
 services:
   crafty:
     image: registry.gitlab.com/crafty-controller/crafty-4:latest
-    container_name: crafty_container    
+    container_name: crafty
     restart: always
     ports:
         - "8000:8000" # HTTP
@@ -33,5 +33,6 @@ networks:
     external: true
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjQ5NjA4NywxOTM2ODQxMzYwXX0=
+eyJoaXN0b3J5IjpbMTc0Njg1MDY2NywtMTI2NDk2MDg3LDE5Mz
+Y4NDEzNjBdfQ==
 -->

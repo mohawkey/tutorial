@@ -29,7 +29,9 @@ network:
 ## set permissions
 ~~~
 chmod 600 /etc/netplan/network.yaml
-apply netplan
+
+netpla generate
+netplan apply 
 ~~~
 ## Install mscmanager
 ~~~
@@ -44,7 +46,7 @@ sudo apt install openjdk-21-jre-headless
 echo "eula=true" > eula.txt
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Njg3MzA4NDYsMzM1OTQzNzI2LC02Mz
-M0OTI5NzgsLTE5ODk3NjI5OTgsMjAyNDUyODMyMSwtMjAyODk5
-ODI1NV19
+eyJoaXN0b3J5IjpbMjA3ODMyMDEzNSwzMzU5NDM3MjYsLTYzMz
+Q5Mjk3OCwtMTk4OTc2Mjk5OCwyMDI0NTI4MzIxLC0yMDI4OTk4
+MjU1XX0=
 -->

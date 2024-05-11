@@ -29,7 +29,9 @@ apply netplan
 ## Install mscmanager
 ~~~
 sudo su -c "wget -qO- https://script.mcsmanager.com/setup.sh | bash"
+sudo apt install default-jre-headless
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNDUyODMyMSwtMjAyODk5ODI1NV19
+eyJoaXN0b3J5IjpbLTQzMjI4NTc0MywyMDI0NTI4MzIxLC0yMD
+I4OTk4MjU1XX0=
 -->

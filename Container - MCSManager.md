@@ -1,7 +1,7 @@
 # Container MSCManager
 ## Create Container
 ~~~
-$ lxc launch ubuntu:22.04 mscmanager -n br0
+$ lxc launch ubuntu:22.04 mcsmanager -n br0
 ~~~
 ## Config ip-address
 ~~~
@@ -39,6 +39,6 @@ sudo apt install openjdk-21-jre-headless
 echo "eula=true" > eula.txt
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMzQ5Mjk3OCwtMTk4OTc2Mjk5OCwyMD
-I0NTI4MzIxLC0yMDI4OTk4MjU1XX0=
+eyJoaXN0b3J5IjpbMzM1OTQzNzI2LC02MzM0OTI5NzgsLTE5OD
+k3NjI5OTgsMjAyNDUyODMyMSwtMjAyODk5ODI1NV19
 -->

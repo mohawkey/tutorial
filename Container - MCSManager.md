@@ -29,9 +29,14 @@ apply netplan
 ## Install mscmanager
 ~~~
 sudo su -c "wget -qO- https://script.mcsmanager.com/setup.sh | bash"
-sudo apt install default-jre-headless
+
+# Restart panel command  
+systemctl start mcsm-daemon.service  
+systemctl start mcsm-web.service
+
+sudo apt install openjdk-21-jre-headless
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMjI4NTc0MywyMDI0NTI4MzIxLC0yMD
+eyJoaXN0b3J5IjpbLTg3NTEyNDkxNiwyMDI0NTI4MzIxLC0yMD
 I4OTk4MjU1XX0=
 -->

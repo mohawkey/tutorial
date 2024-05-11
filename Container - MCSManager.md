@@ -3,11 +3,13 @@
 ~~~
 $ lxc launch ubuntu:22.04 mcsmanager -n br0
 ~~~
-## Config ip-address
+## Access Container
 ~~~
 $ lxc exec mcsmanager bash
 ~~~
+## Config ip-address
 ~~~
+# rm /etc/netplan/*
 # nano /etc/netplan/network.yaml
 ~~~
 ~~~yaml
@@ -26,7 +28,7 @@ network:
 ~~~ 
 ## set permissions
 ~~~
-chmod 600 network.yaml
+chmod 600 /etc/netplan/network.yaml
 apply netplan
 ~~~
 ## Install mscmanager
@@ -42,7 +44,7 @@ sudo apt install openjdk-21-jre-headless
 echo "eula=true" > eula.txt
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NDQwODc5NywzMzU5NDM3MjYsLTYzMz
-Q5Mjk3OCwtMTk4OTc2Mjk5OCwyMDI0NTI4MzIxLC0yMDI4OTk4
-MjU1XX0=
+eyJoaXN0b3J5IjpbLTE1Njg3MzA4NDYsMzM1OTQzNzI2LC02Mz
+M0OTI5NzgsLTE5ODk3NjI5OTgsMjAyNDUyODMyMSwtMjAyODk5
+ODI1NV19
 -->

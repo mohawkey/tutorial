@@ -1,4 +1,5 @@
-### Install Container
+# Container MSCManager
+
 ~~~
 $ lxc launch ubuntu:22.04 mscmanager-155 -n br0
 ~~~
@@ -20,6 +21,10 @@ network:
       nameservers:
         addresses: [192.168.1.151, 1.1.1.1]
 ~~~ 
+#### Install
+~~~
+sudo su -c "wget -qO- https://script.mcsmanager.com/setup.sh | bash"
+~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTE5ODg4OTldfQ==
+eyJoaXN0b3J5IjpbMTY2Mzg4OTExNV19
 -->

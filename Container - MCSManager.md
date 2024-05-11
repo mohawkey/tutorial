@@ -21,10 +21,15 @@ network:
       nameservers:
         addresses: [192.168.1.151, 1.1.1.1]
 ~~~ 
+## set permissions
+~~~
+chmod 600 network.yaml
+apply netplan
+~~~
 ## Install mscmanager
 ~~~
 sudo su -c "wget -qO- https://script.mcsmanager.com/setup.sh | bash"
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjg5OTgyNTVdfQ==
+eyJoaXN0b3J5IjpbMjAyNDUyODMyMSwtMjAyODk5ODI1NV19
 -->

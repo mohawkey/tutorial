@@ -5,7 +5,10 @@ $ lxc launch ubuntu:22.04 mcsmanager -n br0
 ~~~
 ## Config ip-address
 ~~~
-# sudo nano /etc/netplan/network.yaml
+$ lxc exec mcsmanager bash
+~~~
+~~~
+# nano /etc/netplan/network.yaml
 ~~~
 ~~~yaml
 network:
@@ -39,6 +42,7 @@ sudo apt install openjdk-21-jre-headless
 echo "eula=true" > eula.txt
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM1OTQzNzI2LC02MzM0OTI5NzgsLTE5OD
-k3NjI5OTgsMjAyNDUyODMyMSwtMjAyODk5ODI1NV19
+eyJoaXN0b3J5IjpbMTI2NDQwODc5NywzMzU5NDM3MjYsLTYzMz
+Q5Mjk3OCwtMTk4OTc2Mjk5OCwyMDI0NTI4MzIxLC0yMDI4OTk4
+MjU1XX0=
 -->

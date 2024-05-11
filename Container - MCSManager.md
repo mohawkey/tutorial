@@ -35,8 +35,10 @@ systemctl start mcsm-daemon.service
 systemctl start mcsm-web.service
 
 sudo apt install openjdk-21-jre-headless
+
+echo "eula=true" > eula.txt
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3NTEyNDkxNiwyMDI0NTI4MzIxLC0yMD
-I4OTk4MjU1XX0=
+eyJoaXN0b3J5IjpbLTE5ODk3NjI5OTgsMjAyNDUyODMyMSwtMj
+AyODk5ODI1NV19
 -->

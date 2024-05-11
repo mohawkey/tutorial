@@ -6,6 +6,7 @@ $ lxc launch ubuntu:22.04 mcsmanager -n br0
 ## Access Container
 ~~~
 $ lxc exec mcsmanager bash
+# apt update && apt upgrade -y
 ~~~
 ## Config ip-address
 ~~~
@@ -39,15 +40,16 @@ sudo su -c "wget -qO- https://script.mcsmanager.com/setup.sh | bash"
 
 # Restart panel command  
 systemctl start mcsm-daemon.service
-systemctl start mcsm-daemon.service
+systemctl enable mcsm-daemon.service
 systemctl start mcsm-web.service
+systemctl enable mcsm-web.service
 
-sudo apt install openjdk-21-jre-headless
+# apt install openjdk-21-jre-headless
 
 echo "eula=true" > eula.txt
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzEzNjE4OTEsMzM1OTQzNzI2LC02Mz
-M0OTI5NzgsLTE5ODk3NjI5OTgsMjAyNDUyODMyMSwtMjAyODk5
-ODI1NV19
+eyJoaXN0b3J5IjpbOTQwMzQwMTI3LDMzNTk0MzcyNiwtNjMzND
+kyOTc4LC0xOTg5NzYyOTk4LDIwMjQ1MjgzMjEsLTIwMjg5OTgy
+NTVdfQ==
 -->

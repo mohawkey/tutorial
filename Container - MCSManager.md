@@ -41,6 +41,7 @@ sudo su -c "wget -qO- https://script.mcsmanager.com/setup.sh | bash"
 # Restart panel command  
 systemctl start mcsm-daemon.service
 systemctl enable mcsm-daemon.service
+
 systemctl start mcsm-web.service
 systemctl enable mcsm-web.service
 
@@ -50,7 +51,7 @@ mkdir /srv/mcs-main && cd /srv/main
 echo "eula=true" > eula.txt
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3OTQwOTYzOSw5NDAzNDAxMjcsMzM1OT
+eyJoaXN0b3J5IjpbMTExMTI0Mzc2OSw5NDAzNDAxMjcsMzM1OT
 QzNzI2LC02MzM0OTI5NzgsLTE5ODk3NjI5OTgsMjAyNDUyODMy
 MSwtMjAyODk5ODI1NV19
 -->

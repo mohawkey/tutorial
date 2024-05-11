@@ -46,10 +46,11 @@ systemctl enable mcsm-web.service
 
 # apt install openjdk-21-jre-headless
 
+mkdir /srv/mcs-main && cd /srv/main
 echo "eula=true" > eula.txt
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQwMzQwMTI3LDMzNTk0MzcyNiwtNjMzND
-kyOTc4LC0xOTg5NzYyOTk4LDIwMjQ1MjgzMjEsLTIwMjg5OTgy
-NTVdfQ==
+eyJoaXN0b3J5IjpbMTM3OTQwOTYzOSw5NDAzNDAxMjcsMzM1OT
+QzNzI2LC02MzM0OTI5NzgsLTE5ODk3NjI5OTgsMjAyNDUyODMy
+MSwtMjAyODk5ODI1NV19
 -->

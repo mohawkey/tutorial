@@ -38,7 +38,8 @@ netplan apply
 sudo su -c "wget -qO- https://script.mcsmanager.com/setup.sh | bash"
 
 # Restart panel command  
-systemctl start mcsm-daemon.service  
+systemctl start mcsm-daemon.service
+systemctl start mcsm-daemon.service
 systemctl start mcsm-web.service
 
 sudo apt install openjdk-21-jre-headless
@@ -46,7 +47,7 @@ sudo apt install openjdk-21-jre-headless
 echo "eula=true" > eula.txt
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3ODMyMDEzNSwzMzU5NDM3MjYsLTYzMz
-Q5Mjk3OCwtMTk4OTc2Mjk5OCwyMDI0NTI4MzIxLC0yMDI4OTk4
-MjU1XX0=
+eyJoaXN0b3J5IjpbLTE4NzEzNjE4OTEsMzM1OTQzNzI2LC02Mz
+M0OTI5NzgsLTE5ODk3NjI5OTgsMjAyNDUyODMyMSwtMjAyODk5
+ODI1NV19
 -->

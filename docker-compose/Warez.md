@@ -55,10 +55,26 @@ services:
       - 7878:7878
     restart: unless-stopped
     
+  lidarr:
+    image: lscr.io/linuxserver/lidarr:latest
+    container_name: lidarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Brussels
+    volumes:
+      - lidarr:/config
+      # - /path/to/music:/music #optional
+      # - /path/to/downloads:/downloads #optional
+    ports:
+      - 8686:8686
+    restart: unless-stopped
+    
 volumes:
   transmission:
   powlarr:
   radarr:
+  lidarr:
 
 networks: 
   nginx-proxy-net: 
@@ -73,5 +89,6 @@ Remote Port mapping
 192.168.1.151		/downloads/complete		/downloads.complete
 ~~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTk2Mjc0MzEsMTQwMjYyMjM2Nl19
+eyJoaXN0b3J5IjpbLTEyNjQwNDE1NzUsLTE4NTk2Mjc0MzEsMT
+QwMjYyMjM2Nl19
 -->

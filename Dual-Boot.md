@@ -75,6 +75,7 @@ menuentry 'Windows 11' {
 $ sudo nano /etc/default/grub
 
 GRUB_DEFAULT="Windows 11"
+GRUB_TIMEOUT_STYLE=menu
 GRUB_TIMEOUT=5
 
 GRUB_DISABLE_OS_PROBER=true

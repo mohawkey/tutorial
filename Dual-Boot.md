@@ -1,0 +1,86 @@
+# Dual Boot Windows & Linux
+## 1. Get Windows Disk Information
+~~~
+$ sudo fdisk -l
+
+Disk /dev/nvme0n1: 931.51 GiB, 1000204886016 bytes, 1953525168 sectors
+Disk model: Samsung SSD 980 PRO 1TB                 
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 7468902B-D0A3-45D7-879F-6C228341596A
+
+Device              Start        End    Sectors   Size Type
+/dev/nvme0n1p1       2048     206847     204800   100M EFI System
+/dev/nvme0n1p2     206848     239615      32768    16M Microsoft reserved
+/dev/nvme0n1p3     239616 1337659391 1337419776 637.7G Microsoft basic data
+/dev/nvme0n1p4 1337659392 1952059391  614400000   293G Microsoft basic data
+/dev/nvme0n1p5 1952061440 1953521663    1460224   713M Windows recovery environment
+~~~
+## 2. Get the UUID of the EFI partition sudo blkid /dev/nvme0n1p1 (EFI System)
+~~~
+$ sudo blkid /dev/nvme0n1p1
+
+/dev/nvme0n1p1: UUID="C288-99C3" BLOCK_SIZE="512" TYPE="vfat" PARTLABEL="EFI system partition" PARTUUID="a796d218-55dd-4f13-ab3b-29b2adb5b887"
+~~~
+## 3. Grant yourself write permission to the '40_custom' file in /etc/grub.d
+~~~
+$ cd /etc/grub.d
+$ sudo chmod o+w 40_custom
+~~~
+## 4. open
+~~~
+$ sudo nano 40_custom
+~~~
+## 5. Write the following at the bottom of the file and replace C288-99C3 with the correct UUID:
+~~~
+menuentry 'Windows 11' {
+    search --fs-uuid --no-floppy --set=root C288-99C3
+    chainloader (${root})/EFI/Microsoft/Boot/bootmgfw.efi
+}
+~~~
+### 5.1. Update GRUB using 
+~~~
+$ sudo update-grub
+~~~
+~~~
+(Optional) You can confirm that your change was successful by going to /boot/grub/grub.cfg and checking lines 243-251. 
+It should reflect your edits in the 40_custom file
+~~~
+## 7. Reboot your computer reboot
+~~~
+sudo reboot
+~~~
+
+---
+
+# Config
+## 1. Get Menu Entry
+~~~
+$ cat /etc/grub.d/40_custom
+
+#!/bin/sh
+exec tail -n +3 $0
+
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+menuentry 'Windows 11' {
+    search --fs-uuid --no-floppy --set=root C288-99C3
+    chainloader (${root})/EFI/Microsoft/Boot/bootmgfw.efi
+~~~
+## 2. Setting Default Entry Statically
+~~~
+$ sudo nano /etc/default/grub
+
+GRUB_DEFAULT="Windows 11"
+GRUB_TIMEOUT=5
+
+GRUB_DISABLE_OS_PROBER=true
+~~~
+## 3. Update GRUB using 
+~~~
+$ sudo update-grub
+~~~
+
